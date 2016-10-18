@@ -1,0 +1,43 @@
+body
+{
+background-color:grey;
+}
+
+#one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten{
+    border-radius: 200px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-color:black;
+    border-style: solid;
+    border-color: black;
+}
+
+#two, #three, #four, #five, #six, #seven, #eight, #nine, #ten{
+    width:80%;
+    height:80%;
+}
+
+#one, #two
+{
+    width:400px;
+    height:400px;
+    background-color:white;
+}
+
+#three, #four
+{
+    background-color:black;
+}
+
+#five, #six{
+    background-color:blue;
+
+}
+
+#seven, #eight{
+    background-color:red;
+}
+
+#nine, #ten{
+    background-color:yellow;
+}
