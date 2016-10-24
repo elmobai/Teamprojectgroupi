@@ -1,31 +1,37 @@
 <?php
    include("dbconnect.php");
+   include("config.php");
    session_start();
    
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      //$myusername = mysqli_real_escape_string($db,$_POST['username']);
-      //$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
-      
-      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
-     // $result = mysqli_query($db,$sql);
-    //  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
+   if(isset($_SESSION['user'])!="")
+{
+ echo "<script>alert('You are already logged in');</script>";
+ header( 'Location: bookings/bookingmanager.php');
+}
+
+if(isset($_POST['btn-login']))
+{
+ $username = mysql_real_escape_string($_POST['username']);
+ $password = mysql_real_escape_string($_POST['password']);
+ $res=mysql_query("SELECT * FROM user WHERE email='$username'");
+ $row=mysql_fetch_array($res);
+ 
+ if($row['password']==md5($password))
+ {
+  $_SESSION['user'] = $row['username'];
+  //$_SESSION['admin'] = "no";
+  header( 'Location: index.php');
+  echo "<script type='text/javascript'>alert('You have now logged-in.');</script>";
+ }
+ else
+ {
+  ?>
+        <script>alert('Wrong details entered, please try again.');</script>
+ echo "<script>window.location = 'login.php';</script>";
+        <?php
+ }
+}
+
 ?>
 <html>
    
