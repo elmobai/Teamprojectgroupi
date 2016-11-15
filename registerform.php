@@ -1,60 +1,53 @@
+<?php include 'header.php'; ?>
 <!--Register Form-->
 <?php include_once 'dbconnect.php'; include_once 'register.php'; ?>
 <!-- This includes the header section to the top of the webpage -->
-<?php include 'header.php' ?>
+<?php?>
 
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--3-col"></div>
-    <!-- Registration section -->
-    <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp">
-      <section class="login-register">
-        <h3>Register as User</h3>
-        <hr/>
-        <!-- form start -->
-        <form id="" method="post">
-          <!-- row 1 -->
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col">
-              <label for="firstname">First name:</label><br/>
-              <input type="text" name="firstname" required="" placeholder="First name" />
-            </div>
-            <div class="mdl-cell mdl-cell--6-col">
-              <label for="lastname">Last Name:</label><br/>
-              <input type="text" name="lastname" required="" placeholder="Last name" />
-            </div>
-          </div>
-          <!-- row 2 -->
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col">
-              <label for="email">Email:</label><br/>
-              <input type="email" name="email" required="" placeholder="Enter your email" /><br/>
-             
-              </div>
+<div class="container">
+  <h1>Sign Up</h1>
+    <div class="row">
+      <div class = "col-sm-4"></div>
+    
+      <div class = "col-sm-4">
+        <section class="login-register">
+          
+          <!-- form start -->
+          <form id="" method="post">
+           
+                <!--<label for="firstname">First name:</label><br/>-->
+                <input type="text" class="form-control" name="firstname" required="" placeholder="First name" />
+                </p>
+              
+                <!--<label for="lastname">Last Name:</label><br/>-->
+                <input type="text" class="form-control" name="lastname" required="" placeholder="Last name" />
+                </p>
+        
             
-            <div class="mdl-cell mdl-cell--6-col">
-              <label for="username">Username:</label><br/>
-              <input type="text" name="username" required="" placeholder="Confirm email" /><br/>
+                <!--<label for="email">Email:</label><br/>-->
+                <input type="email" class="form-control"  name="email" required="" placeholder="Email Address" /><br/>
+               </p>
+                
+               <!-- <label for="username">Username:</label><br/> -->
+                <input type="text "class="form-control" name="username" required="" placeholder="Confirm Email Address" /><br/>
+              </p>
+      
+               <!-- <label for="password">Password:</label><br/> -->
+                <input type="password" class="form-control"  name="password" required="" placeholder="Password" /><br/>
+                </p>
+  
+               <!-- <label for="confirmpassword">Confirm Password:</label><br/> -->
+                <input type="password" class="form-control"  name="confirmpassword" required="" placeholder="Confirm password" /><br/>
+              </p>
             
-            </div>
-          </div>
-          <!-- row 3 -->
-          <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--6-col">
-              <label for="password">Password:</label><br/>
-              <input type="password" name="password" required="" placeholder="Enter password" /><br/>
-            </div>
-            <div class="mdl-cell mdl-cell--6-col">
-              <label for="confirmpassword">Confirm Password:</label><br/>
-              <input type="password" name="confirmpassword" required="" placeholder="Repeat password" /><br/>
-            </div>
-          </div>
-          <!-- row 4 -->
-          <br/><br/><button name="btn-signup" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">submit</button>
-
-
-</br></br>
-        </form><!-- ./Registration form end -->
-     
-      </section><!-- ./section end -->
+              <button class="btn btn-success" name="btn-signup" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Sign Up</button>
+            </form><!-- ./Registration form end -->
+          </section><!-- ./section end -->
+        </div>
+      
+      <div class = "col-sm-4"></div>
+        
     </div><!-- ./ column end -->
-  </div>
+</div>
+  
+<?php include 'footer.php'; ?>

@@ -1,5 +1,6 @@
 <?php 
-include_once '../api/Config.php';
+include_once '
+Config.php';
 
 function Connect(){
 		$conn = mysqli_connect(dbhost, dbuser,dbpass, dbname);		

@@ -5,7 +5,7 @@ if(isset($_SESSION['user'])!="")
  echo "<script>alert('You are already registered and logged in');</script>";
  echo "<script>window.location = 'index.php';</script>";
 }
-include_once 'classes/dbconnect.php';
+include_once 'dbconnect.php';
 
 if(isset($_POST['btn-signup']))
 {
@@ -19,14 +19,14 @@ if(isset($_POST['btn-signup']))
  {
   ?>
         <script>alert('Thank you, Your details have been added successfully. You will recieve a confirmation email shortly');</script>
- echo "<script>window.location = 'index.php';</script>";
+ echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/index.php';</script>";
         <?php
  }
  else
  {
   ?>
         <script>alert('Sorry, there was an error adding your detials. Please try again.');</script>
- echo "<script>window.location = 'https://itp-module-x14346081.c9users.io/register.php';</script>";
+ echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/registerform.php';</script>";
         <?php
  }
 }

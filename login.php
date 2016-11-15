@@ -1,86 +1,65 @@
 <?php
-   include("dbconnect.php");
-   include("config.php");
-   session_start();
-   
-   if(isset($_SESSION['user'])!="")
-{
- echo "<script>alert('You are already logged in');</script>";
- header( 'Location: bookings/bookingmanager.php');
-}
+ session_start();
+ include_once 'dbconnect.php';
 
-if(isset($_POST['btn-login']))
-{
- $username = mysql_real_escape_string($_POST['username']);
- $password = mysql_real_escape_string($_POST['password']);
- $res=mysql_query("SELECT * FROM user WHERE email='$username'");
- $row=mysql_fetch_array($res);
- 
- if($row['password']==md5($password))
+ if(isset($_POST['btn-login']))
  {
-  $_SESSION['user'] = $row['username'];
-  //$_SESSION['admin'] = "no";
-  header( 'Location: index.php');
-  echo "<script type='text/javascript'>alert('You have now logged-in.');</script>";
- }
- else
- {
-  ?>
-        <script>alert('Wrong details entered, please try again.');</script>
- echo "<script>window.location = 'login.php';</script>";
-        <?php
- }
-}
-
+  $username = trim($_POST['username']);
+  $password = trim($_POST['password']);
+  
+  $password = md5($password);
+   $res=mysql_query("SELECT * register WHERE username= '$username'");
+   $row=mysql_fetch_array($res);
+  
+  
+   if($row['password']==$password){
+    
+    echo "ok"; // log in
+    $_SESSION['user'] = $row['username'];
+   }
+   else{
+    
+    echo "username or password does not exist."; // wrong details 
+   }
+    
+  }
+  
 ?>
-<html>
-   
-   <head>
-      <title>Login Page</title>
-      
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:24px;
-            background-color:#0000;
-         }
-         
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-            background-color: #D1C6C4;
-         }
-         
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
-      
-   </head>
-   
-   <body bgcolor = "#FFFFFF">
-	
-      <div align = "center" margin-top:"30px;">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left;" margin-top:"30px;">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-               <form action = "" method = "post">
-                  <label>User Name  :</label><input type = "text" name = "Username" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Login"/><br />
-                  <a href="#" class="home_btn" onclick="location.reload();location.href='index.html'">go back</a>
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
+<?php include 'header.php';?>
 
-   </body>
-</html>
+<div class="container">
+    <h1>Sign In</h1>
+    <div class="row">
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-4">
+            <!-- login form start -->
+            <p></p>
+            <form id="loginform" action="" method="post">
+              <!-- row 1 -->
+              <!--<label for="username">Username:</label><br/>-->
+              <input type="text" class="form-control" name="username" class="required" "mdl-textfield__input" placeholder="Email address"/></p>
+
+              <!-- row 2 -->
+              <!--<label for="password">Password:</label><br/>-->
+              <input type="password" class="form-control" name="password" class="required" "mdl-textfield__input" placeholder="Password" /></br></br>
+              
+              <label for="remember" class="">
+                  <input type="checkbox" value="remember" id="remember" class="">
+                  <span class="">Stay signed-in</span>
+              </label></p>
+              
+              <!-- row 3 -->
+              <button class="btn btn-success" type="submit" name="btn-login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Sign In</button></br></br>
+             <!-- <p><a href="forget.php" onclick="forget.php" id="forget">Forgot Password?</a></p>-->
+            </form><!-- ./login form end -->
+        </div><!-- column end -->
+        
+        <div class="col-sm-4"></div>
+
+    </div>
+</div>
+   
+<?php include 'footer.php'; ?>
+  
+  
