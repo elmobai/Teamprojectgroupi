@@ -23,24 +23,23 @@
                 <input type="text" class="form-control" name="lastname" required="" placeholder="Last name" />
                 </p>
         
-            
                 <!--<label for="email">Email:</label><br/>-->
-                <input type="email" class="form-control"  name="email" required="" placeholder="Email Address" /><br/>
+                <input type="email" class="form-control"  name="email" required="" placeholder="Email Address" />
                </p>
                 
                <!-- <label for="username">Username:</label><br/> -->
-                <input type="text "class="form-control" name="username" required="" placeholder="Confirm Email Address" /><br/>
+                <input type="text "class="form-control" name="username" required="" placeholder="Confirm Email Address" />
               </p>
       
                <!-- <label for="password">Password:</label><br/> -->
-                <input type="password" class="form-control"  name="password" required="" placeholder="Password" /><br/>
+                <input type="password" class="form-control"  name="password" required="" placeholder="Password" />
                 </p>
   
                <!-- <label for="confirmpassword">Confirm Password:</label><br/> -->
-                <input type="password" class="form-control"  name="confirmpassword" required="" placeholder="Confirm password" /><br/>
-              </p>
+               <!-- <input type="password" class="form-control"  name="confirmpassword" required="" placeholder="Confirm password" /> -->
+            <!--  </p> -->
             
-              <button class="btn btn-success" name="btn-signup" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Sign Up</button>
+              <button class="btn btn-success" name="btn-signup" type="submit">Sign Up</button>
             </form><!-- ./Registration form end -->
           </section><!-- ./section end -->
         </div>

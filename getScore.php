@@ -1,3 +1,4 @@
+include_once'getScore.css';
 <script>
 var num=0,result=0,numshow="0"; 
 var operate=0; 
@@ -35,13 +36,13 @@ function plus(){
 calculate();  
 operate=1; 
 calcul=1; 
-
+clicked++;
 } 
+
 function average(){ //average
 calculate(); 
 operate=1; 
 calcul=2; 
-clicked++;
 } 
 function equal(){ 
 calculate(); //equal
@@ -83,7 +84,7 @@ document.getElementById("note").innerHTML="";
 <title></title> 
 <style type="text/css"> 
 body { 
-font-size:50px; 
+font-size:12px; 
 font-family:Arial, Georgia, "Times New Roman", Times, serif; 
 color:#555; 
 text-align:center; 
@@ -184,6 +185,7 @@ span.welcome a{
 float:right; 
 color:#999; 
 } 
+
 </style> 
 <script language="javascript"> 
 </script> 
@@ -195,7 +197,7 @@ color:#999;
 <input type="text" name="numScreen" class="screen" value="0" onfocus="this.blur();" /> 
 </div> 
 <div id="calcu-btn"> 
-<ul> //button
+<ul> 
 <li onclick="command(0)">0</li> 
 <li onclick="command(1)">1</li> 
 <li onclick="command(2)">2</li> 

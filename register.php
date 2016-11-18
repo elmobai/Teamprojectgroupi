@@ -15,10 +15,10 @@ if(isset($_POST['btn-signup']))
  $username = mysql_real_escape_string($_POST['username']);
  $password = md5(mysql_real_escape_string($_POST['password']));
  
- if(mysql_query("INSERT INTO register(firstname,lastname,email,username,password) VALUES('$firstname','$lastname','$email','$username','$password')"))
+ if(mysql_query("INSERT INTO registered(firstname,lastname,email,username,password) VALUES('$firstname','$lastname','$email','$username','$password')"))
  {
   ?>
-        <script>alert('Thank you, Your details have been added successfully. You will recieve a confirmation email shortly');</script>
+        <script>alert('Thank you, Your details have been added successfully!');</script>
  echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/index.php';</script>";
         <?php
  }
