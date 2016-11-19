@@ -5,7 +5,7 @@ session_start();
 if(isset($_SESSION['user'])!="")
 {
  echo "<script>alert('You are already logged in');</script>";
- header( 'Location: bookings/bookingmanager.php');
+ header( 'Location: index.php');
 }
 
 if(isset($_POST['btn-login']))
@@ -19,7 +19,7 @@ if(isset($_POST['btn-login']))
  {
   $_SESSION['user'] = $row['username'];
   $_SESSION['admin'] = "no";
-  header( 'Location: bookings/bookingmanager.php');
+  header( 'Location: index.php');
   echo "<script type='text/javascript'>alert('You have now logged-in.');</script>";
  }
  else
