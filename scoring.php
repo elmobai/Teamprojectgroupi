@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'dbconnect.php'; 
+include_once 'classes/dbconnect.php'; 
 if(isset($_SESSION['user'])!="")
 	header("Location: index.php");
 

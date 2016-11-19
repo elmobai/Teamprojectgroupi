@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 <!--Register Form-->
-<?php include_once 'dbconnect.php'; include_once 'register.php'; ?>
+<?php include_once 'classes/dbconnect.php'; include_once 'register.php'; ?>
 <!-- This includes the header section to the top of the webpage -->
 <?php?>
 

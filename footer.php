@@ -5,8 +5,8 @@
 
 <!-- footer is included at the end of the page -->
 <p></p>
-<footer class="container-fluid text-center">
-  <p>&copy; Archer's Logbook. All Rights reserved 2016.</p>
-</footer>
+	<footer class="container-fluid text-center">
+	 	<p>&copy; Archer's Logbook. All Rights reserved 2016.</p>
+	</footer>
 </body>
 </html>

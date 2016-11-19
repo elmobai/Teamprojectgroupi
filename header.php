@@ -1,7 +1,7 @@
 <!--Styling for Website-->
 <!-- database connection is being established -->
 <?php
-include_once 'dbconnect.php';
+include_once 'classes/dbconnect.php';
 session_start(); 
 ?>
 <!DOCTYPE html>
@@ -20,6 +20,12 @@ session_start();
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ <!--taken from dragon bookings--> 
+  <link type="text/css" rel="stylesheet" href="../css/footable.core.min.css" />
+  <link type="text/css" rel="stylesheet" href="../css/calendar.css" />
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+  <link type="text/css" rel="stylesheet" href="../css/landingPage.css" />
   
   <!--favicon-->
   <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/logo.jpg" type="image/png" sizes="16x16 32x32">
@@ -63,8 +69,8 @@ session_start();
           <?php 
             if(isset($_SESSION['user'])==""){
               ?>
-            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/loginform.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
-            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/registerform.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/login.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
           <?php } ?>
           
           <!-- Show 'sign out' if user is loggged in -->
