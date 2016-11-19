@@ -1,12 +1,11 @@
 <!-- the tags that were opened, but not closed in header.php are being closed here in the footer -->
-<!-- </div>
+</div>
 </main>
-</div>-->
+</div>
 
 <!-- footer is included at the end of the page -->
-<p></p>
-	<footer class="container-fluid text-center">
-	 	<p>&copy; Archer's Logbook. All Rights reserved 2016.</p>
-	</footer>
+    <footer>
+        &copy; Dragon Room Booking. All Rights reserved 2016.
+    </footer>
 </body>
 </html>

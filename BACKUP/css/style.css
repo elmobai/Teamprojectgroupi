@@ -1,0 +1,107 @@
+/* Main styling */
+body { 
+	background:#f8f8f8;	
+	background-size:100% 100%;
+	color: #333333;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:100;
+	font-size:1.4em;
+	line-height:1.6em;
+	padding:0 0 0;
+    overflow-x: hidden;
+	}
+.hidden{
+    display: none;
+}
+footer{
+    width:100%;
+    color:#999;
+    background-color:#f9f9f9;
+    padding:1em;
+    text-align: center;
+}
+section{
+    background-color:#fff;
+}
+.bookingmanager{
+    width:80%;
+    margin: 0 auto;
+}
+.centered{
+    text-align:center;
+}
+.buttons{
+    text-align-last: center;
+    margin: 0 auto;
+}
+
+/* Login/Register field styling */
+.login-register{
+    padding: 2em;
+    text-align: center;
+}
+.full-width{
+    width: 100%;
+}
+/* header styling */
+.brand{
+    color:#fff;
+    text-decoration: none;
+}
+.brand:hover{
+    text-decoration: underline;
+}
+
+/*Material Design overwrites */
+
+.mdl-layout-title a{
+    color: #000;
+    text-decoration: none;
+}
+.mdl-layout-title a:hover{
+    color: #4ECDC4;
+    transition: color 0.5s ease;
+}
+.text-left{
+    text-align: left;
+    float:left;
+}
+header{
+    padding-right: 200px;
+}
+/* Booking Manager Styling */
+.room {
+    position: relative;
+    right:0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.room .photo{
+    background: url('../images/1stfloor.jpg') 100% 100% / contain no-repeat;
+    display: block;
+    width:100%;
+    height:350px;
+    margin:0;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+.room::before{
+    content: 'If you are seeing this, please contact an administrator, an image should have appeared';
+    margin-left: calc(100% - 149%);
+    width:100%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+}
+
+.align-centered{
+    text-align: center;
+    margin: 0 auto;
+}
+table th:hover{
+    background-color: rgba(0,0,0,.1);
+    transition: all ease 1s;
+}
+/* View bookings styling */

@@ -91,7 +91,7 @@ if(isset($_POST['btn-addbooking']))
           
         </div><!-- row end --><p>To finish the booking process, please click the 'complete' button below:</p>
         <input type="submit" form="bookingForm" id="btn-addbooking" name="btn-addbooking" value="Complete" class="hidden"/>
-          <!-- <a href="https://https://teamprojectgroupi-elmobai.c9users.io/room.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add a New Room</a> -->
+          <!-- <a href="https://teamprojectgroupi-elmobai.c9users.io/room.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add a New Room</a> -->
         </form>
 
       </div>

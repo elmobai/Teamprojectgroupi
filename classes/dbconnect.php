@@ -1,6 +1,6 @@
 <?php
 
-if(!mysql_connect("localhost","elmobai",""))
+if(!mysql_connect("localhost", "elmobai", "")) 
 {
      die('oops connection problem ! --> '.mysql_error());
 }

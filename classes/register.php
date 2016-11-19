@@ -1,7 +1,6 @@
 <!--Register SQL-->
 <?php
 session_start();
-
 if(isset($_SESSION['user'])!="")
 {
  echo "<script>alert('You are already registered and logged in');</script>";
@@ -27,8 +26,8 @@ if(isset($_POST['btn-signup']))
  else
  {
   ?>
-        <script>alert('Sorry, there was an error adding your details. Please try again.');</script>
- echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/register.php';</script>";
+        <script>alert('Sorry, there was an error adding your detials. Please try again.');</script>
+ echo "<script>window.location = 'teamprojectgroupi-elmobai.c9users.io/register.php';</script>";
         <?php
  }
 }

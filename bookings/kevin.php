@@ -23,7 +23,7 @@
             }
             //displayimage();
             function saveimage($name,$image){
-                $con=mysql_connect("localhost","elmobai","");
+                $con=mysql_connect("localhost","teamprojectgroupi-elmobai","");
                 mysql_select_db("c9",$con);
                 $qry="insert into images (name,image) values ('$name','$image')";
                 $result=mysql_query($qry,$con);
@@ -35,7 +35,7 @@
                 }
             }
             function displayimage(){
-                $con=mysql_connect("localhost","elmobai","");
+                $con=mysql_connect("localhost","teamprojectgroupi-elmobai","");
                 mysql_select_db("c9",$con);
                 $qry="select * from images";
                 $result=mysql_query($qry,$con);

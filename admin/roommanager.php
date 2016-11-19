@@ -41,7 +41,7 @@ if($_SESSION['admin']=="no")
             //if($_SESSION['user']!="" && $_SESSION['admin']=="yes"){
               ?>
               Admin View</p>
-              <a href="https://https://teamprojectgroupi-elmobai.c9users.io/room.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add a New Room</a>
+              <a href="https://teamprojectgroupi-elmobai.c9users.io/room.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add a New Room</a>
           <?//php } ?>  
         </div>
         <div class="mdl-cell mdl-cell--5-col"></div>

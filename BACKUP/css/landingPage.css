@@ -1,0 +1,268 @@
+/* Defaults ==================================== */
+	
+	a span.down {
+		font-size: 5em;
+		color:#f9f9f9;
+	}	
+	a span.down:hover{
+		color:#F39C12;
+	}
+	row.down {
+		position: absolute;
+		top:88%;
+		left:47%;
+	}
+	row.down a,
+	row.down span{
+		color:#fff;
+		text-decoration: none;
+	}
+	p{
+		color: #333;
+	}
+	#content .inner{
+		padding:1em 1em 1em 0em;
+	}
+	
+/* Forms ==================================== */	 
+	
+	.form-row {
+		margin-bottom: 0; 
+	} 
+	
+	form label{
+		width:100%;
+	}
+	
+	.input-wrapper {
+		border: solid 1px #e0e0e0;
+		border-bottom:0;
+	}
+	
+	.form-row input.text,
+	.form-row textarea {
+		width:100%;
+		display: block;
+		border:0; 
+		padding:1.2em 0; 
+		font-size:1em;
+		font-weight: 300;
+		font-family: 'Exo 2', sans-serif;
+		background:#f9f9f9;
+		color:#7f7f7f; 
+		text-align: center;
+		-webkit-box-shadow: inset 0 5px 10px #f3f3f3; 
+		-moz-box-shadow: inset 0 5px 10px #f3f3f3; 
+		-o-box-shadow: inset 0 5px 10px #f3f3f3; 
+		box-shadow: inset 0 5px 10px #f3f3f3; 
+	}
+	
+	select {   
+		width:100%;
+		font-size:1em; 
+	}  
+	
+	.form-row input.btn {
+		width:100%;
+		border: 0;
+		font-size:1em;
+		background:#F39C12; 
+		color:#fff;    
+		text-shadow:  0 -1px 2px rgba(0,0,0,.2);	
+	}
+	
+	.form-row input.btn:hover, 
+	.form-row input.btn:focus {
+		background:#E87E04;
+	}
+	
+	.form-box {
+		padding:2em 1em 1em 2em;
+		text-align: center;		
+	}
+	
+	.form-box .btn {
+		-webkit-border-bottom-right-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		border-bottom-right-radius: 4px;  
+		-moz-border-radius-bottomleft: 4px;
+		border-bottom-left-radius: 4px;  
+		-webkit-border-bottom-left-radius: 4px;
+	}
+	
+	.form-box form {
+		position: relative;
+	}
+	
+/* Sidebar ==================================== */
+
+	#sidebar ul {
+		list-style: none;
+		padding:0;
+		margin:0;	
+	}
+
+	#sidebar ul li {
+		list-style: none;
+		padding:0 0 1em;
+		margin:0 0 1em;	
+		border-bottom: solid 1px #eee;
+	}
+
+	#sidebar ul li h3.label {
+		margin:0 0 .5em;	
+	}
+
+	#sidebar ul li h3.label span {
+		color:#F39C12	
+	}	
+
+/* Panel ==================================== */
+	#content container{
+		padding:0;
+	}
+	.panel {
+		background:#f9f9f9; 
+		padding:7em 0;
+		position: relative; 
+		position: relative;
+		overflow:hidden;
+	}
+	.panel2 {
+		padding:2em 0;
+		text-align: center;
+		position: relative; 
+		position: relative;
+		overflow:hidden;
+	}
+	#panel {
+		background:#fff; 
+		padding:7em 0;
+		position: relative; 
+		position: relative;
+		overflow:hidden;
+	}
+	
+	.panel-content {
+		padding:2em 0	
+	}
+	
+	.panel-alt {
+		background:#f9f9f9; 
+	}
+	
+	/* Features =================================== */
+	.features{
+		background: #fff;
+	}
+	.features h3{
+		padding-bottom: .3em;
+		margin-bottom: .2em;
+		border-bottom: 1px solid #F39C12;
+	}
+	.panels {
+		margin-top: 4%;
+		background-color: rgba(0,0,0,0.3);
+		border-radius: 5px;
+		border: 1px solid rgba(255,255,255,.45);
+		padding: 1em;
+		display: relative;
+		z-index: 2;
+	}
+	.panels p{
+		color: rgba(255,255,255,0.9);
+		text-shadow: 1px 1px #000;
+	}
+	.panels h4{
+		color:#fff;
+		text-shadow: 1px 1px #000;
+	}
+	.panels a{
+		text-shadow: 1px 1px #000;
+	}
+	.panel .inner{
+		padding: 2em;
+	}
+	.centering-middle {
+		margin: 0 auto;
+		
+	}
+	
+	/* Promo ==================================== */
+	
+	.promo {
+		background: #6C7A89 url('../../images/rooms/Theatre3.jpg') 100% 60% / cover no-repeat;	
+		margin-bottom:-1px;
+		height:250px;
+	}
+	.headerBg {
+		background: #6C7A89 url('../../images/rooms/3.02.jpg') 100% 40% / cover no-repeat;	
+		margin-bottom:-1px;
+	}
+	.overlay{
+		position: relative;
+		z-index: 5;
+	}
+	
+	.fadedark::before{
+		background-color: rgba(108, 122, 137,0.4);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		left: 0;
+		content: '';
+		z-index: 1;
+		width:100%;
+		height: 350px;
+	}	
+	.fadelight::before{
+		background-color: rgba(255,255,255,0.4);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		left: 0;
+		content: '';
+		z-index: 1;
+		width:100%;
+		height: 350px;
+	}
+	
+	.promo .intro { 
+		max-width:50em;
+		margin:0 auto 5em;
+		text-shadow: 1px 1px #000;
+		position: relative;
+		z-index: 5;
+	}
+	
+	
+	.promo .intro h3 { 
+		color:#fff;
+		font-size: 2.2em;
+		font-weight: 500;
+	}
+	
+	.promo .intro p { 
+		color:#fff;
+		font-size: .8em;
+		font-weight: 400;
+	}
+	.sm-show {
+		display: none;
+	}
+ /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 840px) {
+		
+	/* Hides content on mobile only */	
+	.sm-hidden{
+		display:none;
+	}
+	/* Shows content on mobile only */
+	.sm-show{
+		display:block;
+	}
+  }
+ 
+ 
