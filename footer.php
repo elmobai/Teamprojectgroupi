@@ -5,7 +5,7 @@
 
 <!-- footer is included at the end of the page -->
     <footer>
-        &copy; Dragon Room Booking. All Rights reserved 2016.
+        &copy; Archer's Logbook. All Rights reserved 2016.
     </footer>
 </body>
 </html>

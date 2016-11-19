@@ -59,7 +59,7 @@ End Hamburger Menu-->
       <a class=" brand" href="https://teamprojectgroupi-elmobai.c9users.io/index.php">
         <span class="mdl-layout-title">
           <img src="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" alt="logo" style="width:15%;height:15%;"/>
-          Dragon Room Booking
+          Arecher's Logbook
         </span>
       </a>
       <!-- Add spacer, to align navigation to the right -->

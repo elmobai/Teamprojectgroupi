@@ -25,7 +25,7 @@
 				<h4>Book a room</h4>
 				<p>Book your favourite rooms within the college!</p>
 				<div class="align-centered">
-					<a href="config.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><span aria-hidden="true" class="arrow_carrot-up_alt2" ></span> Make Booking</a>
+					<a href="bookings/bookingmanager.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><span aria-hidden="true" class="arrow_carrot-up_alt2" ></span> Make Booking</a>
 				</div>
 			</div>
 		</div><!-- column end -->
@@ -36,7 +36,7 @@
 				<h4>View your bookings</h4>
 				<p> View bookings that you have made!      </p>
 				<div class="align-centered">
-					<a href="config.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><span aria-hidden="true" class="arrow_carrot-up_alt2" ></span> View Bookings</a>
+					<a href="bookings/bookingmanager.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><span aria-hidden="true" class="arrow_carrot-up_alt2" ></span> View Bookings</a>
 				</div>
 				<!-- Primary-colored flat button -->
 				<!-- <a href="booking.php" class="mdl-button mdl-js-button mdl-button--primary"><span aria-hidden="true" class="arrow_carrot-up_alt2" ></span>Learn More</a>-->

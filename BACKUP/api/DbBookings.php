@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'Config.php';
 
 class DbRooms{
     public function Connect(){
