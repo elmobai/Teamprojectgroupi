@@ -2,7 +2,7 @@
 session_start();
 include_once 'classes/dbconnect.php'; 
 //if(isset($_SESSION['user'])!="")
-	//header("Location: index.php");
+	//git header("Location: index.php");
 
     
 if(isset($_POST['btn-score']))
