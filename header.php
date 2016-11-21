@@ -12,14 +12,13 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#555">
   
-  <script src="index.js"></script>
+   <script src="index.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <!--Dragoon Bookings CSS-->
   <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" type="image/png" sizes="16x16 32x32">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -30,9 +29,6 @@ session_start();
   <link type="text/css" rel="stylesheet" href="../css/landingPage.css" />
   <!-- custom icons via FontAwesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  
-  <!--favicon-->
-  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/logo.jpg" type="image/png" sizes="16x16 32x32">
   
   <title>Archer's Logbook</title>
   
@@ -73,7 +69,7 @@ End Hamburger Menu-->
       <a class=" brand" href="https://teamprojectgroupi-elmobai.c9users.io/index.php">
         <span class="mdl-layout-title">
           <img src="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" alt="logo" style="width:15%;height:15%;"/>
-          Archer's Logbook
+          Dragon Room Booking
         </span>
       </a>
       <!-- Add spacer, to align navigation to the right -->
