@@ -45,21 +45,21 @@
       <form  method="post">
       <br>
       <label for="Score 1">Score1:</label><br/>
-              <input type="text" name="score1" pattern= "[0-11]"  required="" placeholder="Enter Score1" /></br>
+              <input type="text" name="score1" required="" placeholder="Enter Score1" /></br>
           
        <label for="Score 2">Score2:</label><br/>
-              <input type="text" name="score2" pattern= "[0-11]"  required="" placeholder="Enter Score2" />
+              <input type="text" name="score2"  required="" placeholder="Enter Score2" />
        <div>
        <label for="score 3">Score3:</label><br/>
-              <input type="text" name="score3" pattern= "[0-11]" required="" placeholder="Enter Score3" />
+              <input type="text" name="score3" required="" placeholder="Enter Score3" />
         </div>
          <div>
         <label for="score 4">Score4:</label><br/>
-        <input type="text" name="score4" pattern= "[0-11]" required="" placeholder="Enter Score4" />
+        <input type="text" name="score4" required="" placeholder="Enter Score4" />
          </div>
           <div>
        <label for="score 5">Score5:</label><br/>
-              <input type="text" name="score5" pattern= "[0-11]" required="" placeholder="Enter Score5" /> 
+              <input type="text" name="score5" required="" placeholder="Enter Score5" /> 
            </div>
       </br>
         <button class="btn btn-success" name="btn-score" type="submit">Add Score</button>
