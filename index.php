@@ -18,7 +18,7 @@
       <h3>Results </h3> 
     <a class ="results" href= "http://archery.ie/wicklow-indoor-open-championships/">•2016 results</a>
     </br></br>
-    <a class ="results" href= "http://archery.ie/wicklow-indoor-open-championships/">•2015 results</a>
+    <a class ="results" href= "http://archery.ie/wicgit klow-indoor-open-championships/">•2015 results</a>
     <h4>Clubs: </h4> 
     <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">•Leinster Clubs</a>
     
