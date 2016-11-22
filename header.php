@@ -1,3 +1,4 @@
+<!--Styling for Website-->
 <!-- database connection is being established -->
 <?php
 include_once 'classes/dbconnect.php';
@@ -6,8 +7,9 @@ session_start();
 <!DOCTYPE html>
 <html lang="en">
 
+<!--head-->
 <head>
-  
+
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#555">
@@ -18,114 +20,102 @@ session_start();
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" type="image/png" sizes="16x16 32x32">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.indigo-blue.min.css" />
+ 
+ <!--taken from dragon bookings--> 
   <link type="text/css" rel="stylesheet" href="../css/footable.core.min.css" />
   <link type="text/css" rel="stylesheet" href="../css/calendar.css" />
   <link type="text/css" rel="stylesheet" href="../css/style.css" />
   <link type="text/css" rel="stylesheet" href="../css/landingPage.css" />
-  <!-- custom icons via FontAwesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   
+  <!--favicon-->
+  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" type="image/png" sizes="16x16 32x32">
+  
+  <!--Page Title-->  
   <title>Archer's Logbook</title>
-  
+
 </head>
 
 <body>
 
-  <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header ">
-    
-    
-    
-    <!-- Left aligned menu below button -->
-
-<!-- Hamburger Menu 
-<button id="demo-menu-lower-left"
-        class="mdl-button mdl-js-button mdl-button--icon">
-  <i class="material-icons">more_vert</i>
-</button>
-End Hamburger Menu-->
-
-<!-- 
-<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-    for="demo-menu-lower-left">
-  <li class="mdl-menu__item">Some Action</li>
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Another Action</li>
-  <li disabled class="mdl-menu__item">Disabled Action</li>
-  <li class="mdl-menu__item">Yet Another Action</li>
-</ul>
--->
-
-    <div class="mdl-layout__header-row ">
-      <!-- Title -->
-      <a class=" brand" href="https://teamprojectgroupi-elmobai.c9users.io/index.php">
-        <span class="mdl-layout-title">
-          <img src="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" alt="logo" style="width:15%;height:15%;"/>
-          Archer's Logbook
-        </span>
-      </a>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-js-layout">
-        <!--<a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/index.php">Available Rooms</a>
-        <a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/map.php">Floor Plan</a>-->
- 
-        <!-- Show 'Booking Manager' if user is loggged in-->
-       <?php 
-          if($_SESSION['admin']=="no"){
-            ?>
-             <!--<a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/bookings/bookingmanager.php">Bookings</a>-->
-        <?php 
-        } 
-        ?>
+<header>
+  <!--navbar-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+  <a class="navbar-brand" href="index.php">Archer's Logbook</a>
+        <!--<a class="navbar-brand" href="https://teamprojectgroupi-elmobai.c9users.io/index.php">
+          <span class="mdl-layout-title">
+            <img src="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" alt="logo" style="width:15%;height:90%;"/>
+            Archer's Logbook
+          </span>
+        </a>-->
         
-        <!-- Show 'Admin Manager' if admin is loggged in-->
-        <?php 
-          if($_SESSION['admin']=="yes"){
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <!--
+          <li class="active"><a href="#">Home</a></li>
+          <li><a>Shoot for the Stars!</a></li>
+          -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          
+          <!-- Show 'sign in' and 'sign up' if user is not loggged in -->
+          <?php 
+            if(isset($_SESSION['user'])==""){
+              ?>
+            <li>
+             <!-- <a href="https://teamprojectgroupi-elmobai.c9users.io/login.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a>-->
+              <a href="https://teamprojectgroupi-elmobai.c9users.io/login.php"><button class="btn btn-success" name="btn-login">Sign In</button></a>
+            </li>
+            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/register.php"><button class="btn btn-primary" name="btn-login">Sign Up</button></a></li>
+          <?php } ?>
+          
+          <!-- Show 'sign out' if user is loggged in -->
+          <!--change == to != -->
+          <?php 
+          if(isset($_SESSION['user'])!=""){ 
             ?>
-            <a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/admin/usermanager.php">Users</a>
-            <a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/admin/roommanager.php">Rooms</a>
-        <?php } ?>
-        
-        <!-- Show 'Logout' if user/admin is loggged in-->
-        <?php 
-        if(isset($_SESSION['user'])!=""){
-          ?>
-         <a class="mdl-navigation__link"><?php echo $_SESSION['user']; ?></font></strong></a>
-         <a href="https://teamprojectgroupi-elmobai.c9users.io/logout.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Logout</a>
-      <?php } ?>
-
-      <!-- Show 'Login' if user/admin is not loggged in-->
-      <?php 
-        if(isset($_SESSION['user'])==""){
-          ?>
-          <a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/register.php">Register</a>
-          <a class="mdl-navigation__link" href="https://teamprojectgroupi-elmobai.c9users.io/login.php">Login</a>
-      <?php } ?>
-      
-     </nav>
+            <li><a><?php echo $_SESSION['user']; ?></font></strong></a> </li>
+             <li><a href="https://teamprojectgroupi-elmobai.c9users.io/logout.php"><button class="btn btn-danger" name="btn-login">Log Out</button></a></li>
+          <?php } ?>
+          
+        </ul>
+      </div>
     </div>
-  </header>
-  
-  <!-- content open -->
-  <main class="mdl-layout__content">
-    <div class="page-content">
-      <!-- if logged in, username will appear -->
-  <!--<div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col">
-      <h2 class="centered">
-      <?php 
-        if(isset($_SESSION['user'])!=""){
-          ?>
-          <p><strong>Logged in as: <?php echo $_SESSION['user']; ?></strong></p>
-         <a href="logout.php" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Logout</a>
-      <?php } ?>-->
-      </h2></div>
+  </nav>
+</header>
+
+<!--old header-->
+<div class="jumbotron text-center">
+    <!--
+    <h1>Archer's Logbook</h1>
+    <h1><small>Shoot for the stars!</small></h1>
+    
+    
+    <a href="https://teamprojectgroupi-elmobai.c9users.io/index.php">
+      <img src="https://teamprojectgroupi-elmobai.c9users.io/images/logo.jpg" alt="Archer's Logbook" border="0">
+    </a>-->
+    
+    <div>
+    <p></p>
+    
+    <!--dropdown button
+    <div class="dropdown">
+      <button class="dropbtn">Profile</button>
+      <div class="dropdown-content">
+        <a href="https://teamprojectgroupi-elmobai.c9users.io/login.php">Login</a>
+        <a href="https://teamprojectgroupi-elmobai.c9users.io/registerform.php">Register</a>
+      </div>
+      </p>
+    </div>
+    -->
   </div>
-  </html>
+
+</body>
+</html>

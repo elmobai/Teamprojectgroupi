@@ -5,7 +5,7 @@ session_start();
 if(isset($_SESSION['user'])!="")
 {
  echo "<script>alert('You are already logged in');</script>";
- header( 'Location: bookings/bookingmanager.php');
+ header( 'Location: index.php');
 }
 
 if(isset($_POST['btn-login']))
@@ -19,7 +19,7 @@ if(isset($_POST['btn-login']))
  {
   $_SESSION['user'] = $row['username'];
   $_SESSION['admin'] = "no";
-  header( 'Location: bookings/bookingmanager.php');
+  header( 'Location: index.php');
   echo "<script type='text/javascript'>alert('You have now logged-in.');</script>";
  }
  else
@@ -33,38 +33,47 @@ if(isset($_POST['btn-login']))
 ?>
 
 <?php include 'header.php';?>
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col"></div>
-    <div class="mdl-cell mdl-cell--4-col mdl-shadow--2dp">
-      <section class="login-register">
-        <!-- Login Section -->
-        <h3>User Login</h3>
-        <hr/>
+  <div class="container"></br></br>
+     <div class="row">
+           
+        <div class="col-sm-4"></div>
         
-        <!-- login form start -->
-        <form id="loginform" action="" method="post">
-          <!-- row 1 -->
-          <label for="username">Username/Email:</label><br/>
-          <input type="text" name="email" class="required" "mdl-textfield__input" placeholder="Email"/></p>
-          
-          <!-- row 2 -->
-          <label for="password">Password:</label><br/>
-          <input type="password" name="password" class="required" "mdl-textfield__input" placeholder="password" /></br></br>
-          
-          <!-- row 3 -->
-          <button type="submit" name="btn-login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Login</button></br></br>
-          
-          <label for="remember" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-              <input type="checkbox" value="remember" id="remember" class="mdl-checkbox__input">
-              <span class="mdl-checkbox__label">Stay logged-in</span>
-          </label></p>
-          
-          <p><a href="forget.php" onclick="forget.php" id="forget">Forgot Password?</a></p>
-          
-        </form><!-- ./login form end -->
-            <?php include 'extras.php' ?>
-        </section><!-- section end--> 
-    </div><!-- column end -->
+        <div class="col-sm-4">
+          <section class="login-register">
+            
+            <!-- login form start -->
+            <form id="loginform" class="form-signin" action="" method="post">
+             
+              <h1>Sign In</h1></br></br>
+              <!-- <hr/> -->
+            
+              <!-- row 1 -->
+              <!--<label for="username">Username/Email:</label><br/>-->
+              <input type="email" name="email" class="required mdl-textfield__input form-control" required="" placeholder="Email" autofocus=""/></p>
+              
+              <!-- row 2 -->
+              <!--<label for="password">Password:</label><br/>-->
+              <input type="password" name="password" class="required mdl-textfield__input form-control" required=""placeholder="Password"/></br></br>
+              
+              <!-- row 3 -->
+              <button type="submit" name="btn-login" class="btn btn-lg btn-success btn-block">Sign In</button></br></br>
+              
+              <!-- row 4 -->
+              <label for="remember" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                  <input type="checkbox" value="remember-me" id="remember" class="mdl-checkbox__input"><span class="mdl-checkbox__label">Stay Signed-In</span>
+              </label></p>
+              
+              <!--<p><a href="forget.php" onclick="forget.php" id="forget">Forgot Password?</a></p>-->
+              
+            </form><!-- ./login form end -->
+                <!-- <?php include 'extras.php' ?> -->
+            </section><!-- section end--> 
+        </div><!-- column end -->
+        
+        <div class="col-sm-4"></div>
+    </div>
+ </div>
+    
    
   
   <!--Bottom Row DELETE IF NOT NEEDED-->

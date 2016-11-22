@@ -1,39 +1,10 @@
-<?php include 'header.php'; ?>
-<?php include_once 'scoring.php';?>
-<div class="container">
-  <h1>Clubs</h1>
-  <div id="clubs" class="row">
-    <div id="map" class="col-sm-4">
-     <div style="overflow:hidden;width:500px;height:500px;resize:none;max-width:100%;"><div id="my-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=archery+clubs&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="google-maps-html" rel="nofollow" href="http://www.interserver-coupons.com" id="auth-maps-data">http://www.interserver-coupons.com</a><style>#my-map-display .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div><script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=e64fa5a0-63dd-8ab9-5138-d584a3c04ba7&c=google-maps-html&u=1479207504" defer="defer" async="async"></script>
-    </div>
- 
-    <div id="filterclub" class="col-sm-4">
-      <h3>Archery Ireland</h3>
-      <div>
-         <a class="twitter-timeline" data-width="320" data-height="420" href="https://twitter.com/ArcheryIreland">Tweets by ArcheryIreland</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-    </div>
-    
-    <div id="results" class="col-sm-4">
-      <h3>Results </h3> 
-    <a class ="results" href= "http://archery.ie/wicklow-indoor-open-championships/">•2016 results</a>
-    </br></br>
-    <a class ="results" href= "http://archery.ie/wicgit klow-indoor-open-championships/">•2015 results</a>
-    <h4>Clubs: </h4> 
-    <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">•Leinster Clubs</a>
-    
-    </br></br>
-    <a class ="Connacht Clubs" href= "http://archery.ie/clubs/?province=connacht">•Connacht Clubs</a>
-    
-    </br></br>
-    <a class ="Munster clubs" href= "http://archery.ie/clubs/?province=munster">•Munster Clubs</a>
-    
-    </br></br>
-    <a class ="Ulster clubs" href= "http://archery.ie/clubs/?province=ulster">•Ulster Clubs</a>
-    </div>
-    
-  </div>
-</div>
+<?php 
+if(isset($_SESSION['user'])=="")
+{
+ echo "<script>alert('Please log-in before viewing this page.');</script>";
+ echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/login.php';</script>";
+}?>
+
 
 <div class="container">
   <h1>My Stats</h1>
@@ -68,7 +39,7 @@
     </div>
   
     <div id="filterstat" class="col-sm-4 dark">
-      <h3>Average score overall</h3>
+      <h3>Filter</h3>
       <?php
 	// Connect to database server
 
@@ -85,7 +56,6 @@
 	
 	
 	   // Write the value of the column AVERAGE
- 
 	  echo $row['AVERAGE'] .
 
 	  
@@ -117,5 +87,3 @@
     </div>
   </div>
 </div>
-
-<?php include 'footer.php'; ?>

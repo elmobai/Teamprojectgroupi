@@ -19,7 +19,7 @@ if(isset($_POST['btn-signup']))
  if(mysql_query("INSERT INTO registered(firstname,lastname,email,username,password) VALUES('$firstname','$lastname','$email','$username','$password')"))
  {
   ?>
-        <script>alert('Thank you, Your details have been added successfully. You will recieve a confirmation email shortly');</script>
+        <script>alert('Thank you, your details have been added successfully!');</script>
  echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/index.php';</script>";
         <?php
  }
