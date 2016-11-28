@@ -19,7 +19,7 @@ if(isset($_POST['btn-login']))
  {
   $_SESSION['user'] = $row['username'];
   $_SESSION['admin'] = "no";
-  header( 'Location: index.php');
+  header( 'Location: score.php');
   echo "<script type='text/javascript'>alert('You have now logged-in.');</script>";
  }
  else

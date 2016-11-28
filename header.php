@@ -14,7 +14,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#555">
   
-  <script src="index.js"></script>
+  <script src="action.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

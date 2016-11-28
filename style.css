@@ -1,6 +1,12 @@
 /* # = ID, . = Class*/
 
 /*Homepage*/
+#find:hover,
+#register:hover{
+    cursor: pointer;
+    color: blue;
+}
+
 body
 {
 background-color:white;

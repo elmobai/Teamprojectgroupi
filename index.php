@@ -1,5 +1,36 @@
 <?php include 'header.php'; ?>
 <?php include_once 'scoring.php';?>
+<?php include_once 'classes/dbconnect.php';?>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <a href="index.html">
+            <img src="dog.jpg" alt="Dublin Dog Homes" style="width:100px;height:100px;">
+          </a>
+          <h3 id="find">Find a Home</h3>
+          <h3 id="register">Register Your Home</h3>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="jumbotron">
+          <h2>Welcome to Dublin Dog Homes!</h2>
+          <p>Here you can find a home for a dog or register your home to adopt a dog :)</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="action">
+          <p>When you click 'Find a Home' you will be able to see all the homes waiting to adopt a dog.</p>
+          <p>When you click 'Register Your Home' you will be able to register your home to adopt a dog.</p>
+        </div>
+      </div>
+    </div>   
+</div>
+
 <div class="container">
   <h1>Clubs</h1>
   <div id="clubs" class="row">
@@ -16,10 +47,29 @@
     
     <div id="results" class="col-sm-4">
       <h3>Results </h3> 
-    <a class ="results" href= "http://archery.ie/wicklow-indoor-open-championships/">•2016 results</a>
-    </br></br>
-    <a class ="results" href= "http://archery.ie/wicgit klow-indoor-open-championships/">•2015 results</a>
+    <?php
+                  $user_id = $_SESSION['user'];
+                  $sql = "SELECT * from scores WHERE score1,score2,score3,score4,score5 = '$score1,$score2,$score3,$score4,$score5'";
+                  $query = mysql_query($sql) or die(mysql_error());
+              ?>
+        
+              <?php 
+              $res = json_decode($result, true);
+              foreach($res as $item); //foreach element in $arr
+              while ($row = mysql_fetch_array($query)) {?>
+              
+              <tr>
+                <td ><?php echo $score1['score1'];?></td>
+                <td ><?php echo $score2['score2'];?></td>
+                <td ><?php echo $score3['score3'];?></td>
+                <td ><?php echo $score4['score4'];?></td>
+                <td ><?php echo $score5['score5'];?></td> 
+              </tr>
+              
+                <?php } ?>
+       </div>
     <h4>Clubs: </h4> 
+    
     <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">•Leinster Clubs</a>
     
     </br></br>
@@ -30,7 +80,7 @@
     
     </br></br>
     <a class ="Ulster clubs" href= "http://archery.ie/clubs/?province=ulster">•Ulster Clubs</a>
-    </div>
+ 
     
   </div>
 </div>
@@ -44,22 +94,22 @@
       <p>Please enter score below</p>
       <form  method="post">
       <br>
-      <label for="Score 1">Score1:</label><br/>
-              <input type="text" name="score1" required="" placeholder="Enter Score1" /></br>
+      <label for="Score 1">Score 1:</label><br/>
+              <input type="text" name="score1" required="" placeholder="Enter Score 1" /></br>
           
-       <label for="Score 2">Score2:</label><br/>
-              <input type="text" name="score2"  required="" placeholder="Enter Score2" />
+       <label for="Score 2">Score 2:</label><br/>
+              <input type="text" name="score2"  required="" placeholder="Enter Score 2" />
        <div>
        <label for="score 3">Score3:</label><br/>
-              <input type="text" name="score3" required="" placeholder="Enter Score3" />
+              <input type="text" name="score3" required="" placeholder="Enter Score 3" />
         </div>
          <div>
-        <label for="score 4">Score4:</label><br/>
-        <input type="text" name="score4" required="" placeholder="Enter Score4" />
+        <label for="score 4">Score 4:</label><br/>
+        <input type="text" name="score4" required="" placeholder="Enter Score 4" />
          </div>
           <div>
-       <label for="score 5">Score5:</label><br/>
-              <input type="text" name="score5" required="" placeholder="Enter Score5" /> 
+       <label for="score 5">Score 5:</label><br/>
+              <input type="text" name="score5" required="" placeholder="Enter Score 5" /> 
            </div>
       </br>
         <button class="btn btn-success" name="btn-score" type="submit">Add Score</button>
@@ -110,10 +160,10 @@
 <div class="container">
    <h1>Edit Stats</h1>
    <div id="editstats" class="row">
-   <div class="col-sm-12 dark">
-      <h3>Input Stats</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="col-sm-12 dark">
+          <h3>Input Stats</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
   </div>
 </div>

@@ -14,6 +14,7 @@ if(isset($_POST['btn-score']))
  $score5 = mysql_real_escape_string($_POST['score5']);
  
   if(mysql_query("INSERT INTO scores(score1,score2,score3,score4,score5) VALUES('$score1','$score2','$score3','$score4','$score5')"))
+ 
   {
   ?>
                <script>alert('Thank you, Your scores have been added successfully!');</script>
