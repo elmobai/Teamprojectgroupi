@@ -47,27 +47,35 @@
     
     <div id="results" class="col-sm-4">
       <h3>Results </h3> 
-    <?php
-                  $user_id = $_SESSION['user'];
-                  $sql = "SELECT * from scores WHERE score1,score2,score3,score4,score5 = '$score1,$score2,$score3,$score4,$score5'";
-                  $query = mysql_query($sql) or die(mysql_error());
-              ?>
-        
-              <?php 
-              $res = json_decode($result, true);
-              foreach($res as $item); //foreach element in $arr
-              while ($row = mysql_fetch_array($query)) {?>
+ <?php
+    $servername = "localhost";
+    $username = "elmobai";
+    $password = "";
+   
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+    // Check connection
+    if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+    } 
+    
+    $sql = "SELECT score1,score2,score3,score4,score5 FROM scores";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+         // output data of each row
+         while($row = $result->fetch_assoc()) {
+             echo "<br> score: ". $row["score1"]. " - Score: ". $row["score2"]. " " . $row["score3"]. $row["score4"]. " " . $row["score25"].   "<br>";
+         }
+    } else {
+         echo "0 results";
+    }
+
+$conn->close();
+?>  
               
-              <tr>
-                <td ><?php echo $score1['score1'];?></td>
-                <td ><?php echo $score2['score2'];?></td>
-                <td ><?php echo $score3['score3'];?></td>
-                <td ><?php echo $score4['score4'];?></td>
-                <td ><?php echo $score5['score5'];?></td> 
-              </tr>
               
-                <?php } ?>
-       </div>
     <h4>Clubs: </h4> 
     
     <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">•Leinster Clubs</a>
@@ -80,7 +88,7 @@
     
     </br></br>
     <a class ="Ulster clubs" href= "http://archery.ie/clubs/?province=ulster">•Ulster Clubs</a>
- 
+ </div>
     
   </div>
 </div>
@@ -129,7 +137,7 @@
 	// SQL query
 
 
-	$strSQL = "SELECT AVG(AVERAGE) AS AVERAGE FROM scores";
+	$strSQL = "SELECT AVG(AVERAGE) FROM scores";
 	// Execute the query (the recordset $rs contains the result)
 	$rs = mysql_query($strSQL);
 	

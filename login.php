@@ -26,7 +26,7 @@ if(isset($_POST['btn-login']))
  {
   ?>
         <script>alert('Wrong details entered, please try again.');</script>
- echo "<script>window.location = 'login.php';</script>";
+        <script>window.location = 'login.php';</script>;
         <?php
  }
 }
