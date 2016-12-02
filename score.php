@@ -8,35 +8,38 @@ if(isset($_SESSION['user'])=="")
 }?>
 
 <div class="container">
-  <h1>My Stats</h1>
+  <h1>My Statistics</h1>
   <div id="my Stats" class="row" style="height:80px">
-    <div id="target" class="col-sm-4 light">
-    
-      <h3>Scores</h3>
-      <p>Please enter score below</p>
-      <form  method="post">
-      <br>
-      <label for="Score 1">Score1:</label><br/>
-              <input type="text" name="score1" required="" placeholder="Enter Score1" /></br>
+      
+    <!-- Score -->  
+    <!--<div id="target" class="col-sm-4 light"> -->
+    <div id="target" class="col-sm-4"> 
+    <section class="login-register">
+      
+      <form class="form-signin" method="post">
+      
+          <h1>Scores</h1></br>
+          <p>Please enter your score below</p></br></br>
           
-       <label for="Score 2">Score2:</label><br/>
-              <input type="text" name="score2"  required="" placeholder="Enter Score2" />
-       <div>
-       <label for="score 3">Score3:</label><br/>
-              <input type="text" name="score3" required="" placeholder="Enter Score3" />
-        </div>
-         <div>
-        <label for="score 4">Score4:</label><br/>
-        <input type="text" name="score4" required="" placeholder="Enter Score4" />
-         </div>
-          <div>
-       <label for="score 5">Score5:</label><br/>
-              <input type="text" name="score5" required="" placeholder="Enter Score5" /> 
-           </div>
-      </br>
-        <button class="btn btn-success" name="btn-score" type="submit">Add Score</button>
+          <!-- <label for="Score 1">Score 1:</label><br/> -->
+          <input type="text" class="required mdl-textfield__input form-control" name="score1" required="" placeholder="Enter score 1" autofocus=""/></p>
+              
+           <!-- <label for="Score 2">Score 2:</label> -->
+           <input type="text" class="required mdl-textfield__input form-control" name="score2"  required="" placeholder="Enter score 2"/></p>
+    
+           <!-- <label for="score 3">Score 3:</label> -->
+           <input type="text" class="required mdl-textfield__input form-control" name="score3" required="" placeholder="Enter score 3"/></p>
+    
+            <!-- <label for="score 4">Score 4:</label><br/> -->
+            <input type="text" class="required mdl-textfield__input form-control" name="score4" required="" placeholder="Enter score 4"/></p>
+            
+           <!-- <label for="score 5">Score 5:</label> -->
+           <input type="text" class="required mdl-textfield__input form-control" name="score5" required="" placeholder="Enter score 5"/></br></br>
+           
+            <button class="btn btn-lg btn-success btn-block" name="btn-score" type="submit">Add scores</button></br>
+        
         </form>
-     
+     </section>
     </div>
   
     <div id="filterstat" class="col-sm-4 dark">
@@ -76,8 +79,24 @@ if(isset($_SESSION['user'])=="")
     
   </div>
   
+  <!-- divs are overlapping -->
+  <!--
+  <div class="row" style="height:80px">
+      <div id="target" class="col-sm-12"> 
+           include 'index.php'; ?>
+     </div>
+  </div>
+  
+  <div class="row" style="height:80px">
+      <div id="target" class="col-sm-12"> 
+          include 'footer.php'; ?>
+      </div>
+  </div>
+  
 </div>
+-->
 
+<!--
 <div class="container">
    <h1>Edit Stats</h1>
    <div id="editstats" class="row">
@@ -88,3 +107,4 @@ if(isset($_SESSION['user'])=="")
     </div>
   </div>
 </div>
+-->

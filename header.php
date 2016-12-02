@@ -14,7 +14,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#555">
   
-  <script src="action.js"></script>
+  <script src="js/action.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,7 +28,7 @@ session_start();
   <link type="text/css" rel="stylesheet" href="../css/landingPage.css" />
   
   <!--favicon-->
-  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" type="image/png" sizes="16x16 32x32">
+  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo3.png" type="image/png" sizes="16x16 32x32">
   
   <!--Page Title-->  
   <title>Archer's Logbook</title>
@@ -71,9 +71,13 @@ session_start();
               ?>
             <li>
              <!-- <a href="https://teamprojectgroupi-elmobai.c9users.io/login.php"><span class="glyphicon glyphicon-log-in"></span> Sign In</a>-->
-              <a href="https://teamprojectgroupi-elmobai.c9users.io/login.php"><button class="btn btn-success" name="btn-login">Sign In</button></a>
+             <a href="https://teamprojectgroupi-elmobai.c9users.io/login.php"><button class="btn btn-success" name="btn-login">Sign In</button></a>
+              <!-- <a><button class="btn btn-success" name="btn-login" id="login">Sign In</button></a> -->
             </li>
+            
             <li><a href="https://teamprojectgroupi-elmobai.c9users.io/register.php"><button class="btn btn-primary" name="btn-login">Sign Up</button></a></li>
+            <!-- <li><a><button class="btn btn-primary" name="btn-login" id="reg">Sign Up</button></a></li> -->
+
           <?php } ?>
           
           <!-- Show 'sign out' if user is loggged in -->

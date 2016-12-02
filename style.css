@@ -1,10 +1,9 @@
 /* # = ID, . = Class*/
 
 /*Homepage*/
-#find:hover,
-#register:hover{
+#login:hover, #reg:hover{
     cursor: pointer;
-    color: blue;
+    color: white;
 }
 
 body

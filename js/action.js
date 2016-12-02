@@ -1,24 +1,14 @@
 $(document).ready(function() {
-    $(".jumbotron").mouseenter(function() {
-        $(this).animate({
-            height: '+=7px'
-        });
-    });
-    $(".jumbotron").mouseleave(function() {
-        $(this).animate({
-            height: '-=7px'
-        });
-    });
-    $('#find').click(function() {
+    $('#login').click(function() {
         $.ajax({
-            url: "data.php"
+            url: "login.php"
         }).done(function(data) {
             $('#action').html(data);
         });
     });
-    $('#register').click(function() {
+    $('#reg').click(function() {
         $.ajax({
-            url: "register.html"
+            url: "register.php"
         }).done(function(data) {
             $('#action').html(data);
         });
@@ -44,4 +34,12 @@ $(document).ready(function() {
     });
 });
 
+  $('#score').click(function() {
+        $.ajax({
+            url: "score.php"
+        }).done(function(data) {
+            $('#action').html(data);
+        });
+    });
+    
 //hide div when clicked again

@@ -65,4 +65,3 @@
     <!-- </div><!-- ./ column end -->
     <!--<div class="mdl-cell mdl-cell--3-col"></div>
   </div>-->
-<?php include 'footer.php'; ?>

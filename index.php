@@ -1,35 +1,31 @@
+<!DOCTYPE html>
+
 <?php include 'header.php'; ?>
 <?php include_once 'scoring.php';?>
 <?php include_once 'classes/dbconnect.php';?>
 
-<div class="container">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="style/css" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/action.js"></script>
+
+<!-- <div class="container">
     <div class="row">
-      <div class="col-sm-4">
-        <div class="jumbotron">
-          <a href="index.html">
-            <img src="dog.jpg" alt="Dublin Dog Homes" style="width:100px;height:100px;">
-          </a>
-          <h3 id="find">Find a Home</h3>
-          <h3 id="register">Register Your Home</h3>
-        </div>
-      </div>
-      <div class="col-sm-8">
-        <div class="jumbotron">
-          <h2>Welcome to Dublin Dog Homes!</h2>
-          <p>Here you can find a home for a dog or register your home to adopt a dog :)</p>
-        </div>
-      </div>
-    </div>
-    
+      <div class="col-sm-12">
+          <!--<h3 id="find">Login</h3>
+          <h3 id="register">Register</h3>-->
+      <!--  </div>
+
     <div class="row">
       <div class="col-sm-12">
         <div id="action">
-          <p>When you click 'Find a Home' you will be able to see all the homes waiting to adopt a dog.</p>
-          <p>When you click 'Register Your Home' you will be able to register your home to adopt a dog.</p>
+          <p>Placeholder</p>
         </div>
       </div>
     </div>   
-</div>
+</div> -->
+
 
 <div class="container">
   <h1>Clubs</h1>
@@ -48,31 +44,20 @@
     <div id="results" class="col-sm-4">
       <h3>Results </h3> 
  <?php
-    $servername = "localhost";
-    $username = "elmobai";
-    $password = "";
-   
+ include_once 'classes/dbconnect.php';
+    $sql = ("SELECT score1,score2,score3,score4,score5 FROM scores");
     
-    // Create connection
-    $conn = new mysqli($servername, $username, $password);
-    // Check connection
-    if ($conn->connect_error) {
-         die("Connection failed: " . $conn->connect_error);
-    } 
-    
-    $sql = "SELECT score1,score2,score3,score4,score5 FROM scores";
-    $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
          // output data of each row
          while($row = $result->fetch_assoc()) {
-             echo "<br> score: ". $row["score1"]. " - Score: ". $row["score2"]. " " . $row["score3"]. $row["score4"]. " " . $row["score25"].   "<br>";
+             echo "<br> score: ". $row["score1"]. " - Score: ". $row["score2"]. " " . $row["score3"]. $row["score4"]. " " . $row["score5"].   "<br>";
          }
     } else {
          echo "0 results";
     }
 
-$conn->close();
+
 ?>  
               
               
@@ -88,11 +73,13 @@ $conn->close();
     
     </br></br>
     <a class ="Ulster clubs" href= "http://archery.ie/clubs/?province=ulster">•Ulster Clubs</a>
- </div>
+    </div>
     
   </div>
 </div>
 
+ 
+ <!--
 <div class="container">
   <h1>My Stats</h1>
   <div id="my Stats" class="row" style="height:80px">
@@ -162,9 +149,10 @@ $conn->close();
     </div>
     
   </div>
-  
 </div>
+-->
 
+<!--
 <div class="container">
    <h1>Edit Stats</h1>
    <div id="editstats" class="row">
@@ -175,5 +163,5 @@ $conn->close();
     </div>
   </div>
 </div>
-
+-->
 <?php include 'footer.php'; ?>

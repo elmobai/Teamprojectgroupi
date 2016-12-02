@@ -89,4 +89,3 @@ if(isset($_POST['btn-login']))
     <!--<div class="mdl-cell mdl-cell--4-col"></div>
   </div>-->
   
-<?php include 'footer.php'; ?>

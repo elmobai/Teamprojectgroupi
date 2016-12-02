@@ -12,9 +12,10 @@ if(isset($_POST['btn-score']))
  $score3 = mysql_real_escape_string($_POST['score3']);
  $score4 = mysql_real_escape_string($_POST['score4']);
  $score5 = mysql_real_escape_string($_POST['score5']);
+ $AVERAGE = mysql_real_escape_string($_POST['AVERAGE']);
+ if(mysql_query("INSERT INTO scores(score1,score2,score3,score4,score5) VALUES('$score1','$score2','$score3','$score4','$score5')"))
  
-  if(mysql_query("INSERT INTO scores(score1,score2,score3,score4,score5) VALUES('$score1','$score2','$score3','$score4','$score5')"))
- 
+
   {
   ?>
                <script>alert('Thank you, Your scores have been added successfully!');</script>
