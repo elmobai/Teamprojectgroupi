@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<div class="clearfix"></div><br/><br/>
+<div class="map"></div><br/><br/>
  <div class="mdl-grid">
     <section class="mdl-cell mdl-cell--10-col mdl-cell--1-offset align-centered mdl-shadow--2dp">
     <h2>Floor Plan</h2>

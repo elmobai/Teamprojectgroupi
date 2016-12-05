@@ -85,7 +85,7 @@ session_start();
           <?php 
           if(isset($_SESSION['user'])!=""){ 
             ?>
-            <li><a><?php echo $_SESSION['user']; ?></font></strong></a> </li>
+            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/score.php"><button class="btn btn-warning" name="btn-login"><?php echo $_SESSION['user']; ?></font></strong></button></a> </li>
              <li><a href="https://teamprojectgroupi-elmobai.c9users.io/logout.php"><button class="btn btn-danger" name="btn-login">Log Out</button></a></li>
           <?php } ?>
           
