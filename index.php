@@ -13,6 +13,7 @@
 <br/>
 
 <div class="container">
+    <!-- index intro -->
     <div class="row">
         <div class="col-sm-12">
           <h1>Welcome to Archers Logbook</h1>
@@ -20,10 +21,12 @@
         </div>
   </div>
   
-      <!-- separate divs -->
+    <!-- separate divs -->
     </p>
   
+   <!-- index content -->
   <div id="clubs" class="row">
+    <!-- nearby clubs -->
       <div id="map" class="col-sm-4">
             <h1>Nearby Clubs</h1>
              <div style="overflow:hidden;width:500px;height:500px;resize:none;max-width:100%;">
@@ -38,19 +41,22 @@
     <!-- separate divs -->
     </p>
  
+    <!-- latest news -->
     <div id="filterclub" class="col-sm-4">
       <h1>Latest News</h1><br/>
       <div>
-         <a class="twitter-timeline" data-width="320" data-height="420" href="https://twitter.com/ArcheryIreland">Tweets by ArcheryIreland</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+         <a class="twitter-timeline" data-width="310" data-height="520" href="https://twitter.com/ArcheryIreland">Tweets by ArcheryIreland</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
     
     <!-- separate divs -->
     </p>
     
+    <!-- Club Directory -->
     <div id="results" class="col-sm-4">
+      <h1>Club Directory</h1> </br>
         <section class="login-register">
-            <h1>Club Directory</h1> </br>
+            
             
             <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">• Leinster Clubs</a>
             
