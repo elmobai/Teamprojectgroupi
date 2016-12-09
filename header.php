@@ -27,6 +27,9 @@ session_start();
   <link type="text/css" rel="stylesheet" href="../css/style.css" />
   <link type="text/css" rel="stylesheet" href="../css/landingPage.css" />
   
+   <!-- custom icons via FontAwesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
   <!--favicon-->
   <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo3.png" type="image/png" sizes="16x16 32x32">
   

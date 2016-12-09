@@ -10,31 +10,46 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="js/action.js"></script>
 
-<!-- <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-          <!--<h3 id="find">Login</h3>
-          <h3 id="register">Register</h3>-->
-      <!--  </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <div id="action">
-          <p>Placeholder</p>
-        </div>
-      </div>
-    </div>   
-</div> -->
-
 <br/>
 
 <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+          <h1>Welcome to Archers Logbook</h1>
+          <h1><small>Shoot for the stars!</small></h1>
+        </div>
+  </div>
   
-   <div id="Welcome" class="row">
-     <h1>Welcome to Archers logbook!</h1>
-    <div id="About us" class="col-m-6">
-            <h2>About us!</h2>
-             <p1>Welcome to Archers logbook where you can log and track your scores!</p1>
+      <!-- separate divs -->
+    </p>
+  
+  <div id="clubs" class="row">
+      <div id="map" class="col-sm-4">
+            <h1>Nearby Clubs</h1>
+             <div style="overflow:hidden;width:500px;height:500px;resize:none;max-width:100%;">
+                 <div id="my-map-display" style="height:100%; width:100%;max-width:100%;">
+                 <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=archery+clubs&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU">
+                 </iframe></div><a class="google-maps-html" rel="nofollow" href="http://www.interserver-coupons.com" id="auth-maps-data">http://www.interserver-coupons.com</a>
+             <style>#my-map-display .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style>
+             </div>
+             <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=e64fa5a0-63dd-8ab9-5138-d584a3c04ba7&c=google-maps-html&u=1479207504" defer="defer" async="async"></script>
+    </div>
+    
+    <!-- separate divs -->
+    </p>
+ 
+    <div id="filterclub" class="col-sm-4">
+      <h1>Latest News</h1><br/>
+      <div>
+         <a class="twitter-timeline" data-width="320" data-height="420" href="https://twitter.com/ArcheryIreland">Tweets by ArcheryIreland</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+    
+    <!-- separate divs -->
+    </p>
+    
+    <div id="results" class="col-sm-4">
+        <section class="login-register">
             <h1>Club Directory</h1> </br>
             
             <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">• Leinster Clubs</a>
