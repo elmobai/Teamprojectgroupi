@@ -2,7 +2,6 @@
 </div>
 </main>
 </div>
-
 <!-- footer is included at the end of the page -->
     <footer>
         <a href="https://teamprojectgroupi-elmobai.c9users.io/index.php">

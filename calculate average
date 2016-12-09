@@ -1,0 +1,17 @@
+<?php
+    	// Connect to database server
+    	
+    	// Select database
+    	mysql_select_db("c9") or die(mysql_error());
+    	// SQL query
+    	$strSQL = "SELECT AVG(AVERAGE) AS AVERAGE FROM scores";
+    	// Execute the query (the recordset $rs contains the result)
+    	$rs = mysql_query($strSQL);
+    	
+    	
+    	   // Write the value of the column AVERAGE
+    	  echo $row['AVERAGE'] .
+    	  
+    	// Close the database connection
+    	mysql_close();
+    ?>

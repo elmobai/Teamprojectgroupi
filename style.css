@@ -1,5 +1,10 @@
 /* # = ID, . = Class*/
 
+body
+{
+background-color: #555;
+}
+
 /*Homepage*/
 #login:hover, #reg:hover{
     cursor: pointer;
@@ -11,10 +16,6 @@
     height:500px;
 }*/
 
-body
-{
-background-color:white;
-}
 .light{
    background-color:#d3d3d3;
 }

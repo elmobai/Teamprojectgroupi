@@ -47,7 +47,7 @@ session_start();
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-  <a class="navbar-brand" href="index.php">Archer's Logbook</a>
+      <a class="navbar-brand" href="index.php"><strong>Archer's Logbook</strong></a>
         <!--<a class="navbar-brand" href="https://teamprojectgroupi-elmobai.c9users.io/index.php">
           <span class="mdl-layout-title">
             <img src="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo2.png" alt="logo" style="width:15%;height:90%;"/>
@@ -85,7 +85,7 @@ session_start();
           <?php 
           if(isset($_SESSION['user'])!=""){ 
             ?>
-            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/score.php"><button class="btn btn-warning" name="btn-login"><?php echo $_SESSION['user']; ?></font></strong></button></a> </li>
+            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/score.php"><button class="btn btn-warning" name="btn-login"><?php echo $_SESSION['user']; ?>'s Profile</font></strong></button></a> </li>
              <li><a href="https://teamprojectgroupi-elmobai.c9users.io/logout.php"><button class="btn btn-danger" name="btn-login">Log Out</button></a></li>
           <?php } ?>
           
@@ -121,5 +121,6 @@ session_start();
     -->
   </div>
 
+<!-- check if this removes the gap just above the footer - won't save/reload right now -->
 </body>
 </html>

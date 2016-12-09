@@ -2,9 +2,6 @@
 session_start();
 include_once 'classes/dbconnect.php'; 
 
-
-
-    
 if(isset($_POST['btn-score']))
 {
  $score1 = mysql_real_escape_string($_POST['score1']);
