@@ -27,13 +27,13 @@ if(isset($_SESSION['user'])=="")
              <h1>Statistics Overview</h1></br>
              <p>Your results are listed below</p></br></br>
              
-             <h4><li class="list-group-item">Games I've Played: 10</li></h4>
-             <h4><li class="list-group-item">Average score: 9</li></h4>
-             <h4><li class="list-group-item">Overall score: 190</li></h4>
-             <h4><li class="list-group-item">Best game: 60</li></h4>
-             <h4><li class="list-group-item">Worst game: 10</li></h4>
-             <h4><li class="list-group-item">Most recent game: 01/12/2016</li></h4>
-             <h4><li class="list-group-item">Most recent score: 10</li></h4>
+             <h4><li class="list-group-item">Games I've Played: x</li></h4>
+             <h4><li class="list-group-item">Average score: x</li></h4>
+             <h4><li class="list-group-item">Overall score: x</li></h4>
+             <h4><li class="list-group-item">Best game: x</li></h4>
+             <h4><li class="list-group-item">Worst game: x</li></h4>
+             <h4><li class="list-group-item">Most recent game: date</li></h4>
+             <h4><li class="list-group-item">Most recent score: date</li></h4>
  
            </ul>  
         </section>
@@ -80,8 +80,8 @@ if(isset($_SESSION['user'])=="")
     <div id="filterstat" class="col-sm-4">
       
       <section class="login-register">
-      <h1>Filter Scores</h1></br>
-       <p>You can sort your scores below</p></br></br>
+      <h1>Edit Scores</h1></br>
+       <p>You can edit your scores below</p></br></br>
         
        <?php
                   $user_id = $_SESSION['user'];
@@ -97,12 +97,14 @@ if(isset($_SESSION['user'])=="")
                
                    <ul class='list-group'>
                     <li class='list-group-item'>
-                      <h4> Round: x </h4><br>
-                      Shot 1: <?php echo $row['score1'];?> <br>
-                      Shot 2: <?php echo $row['score1'];?> <br>
-                      Shot 3: <?php echo $row['score1'];?> <br>
-                      Shot 4: <?php echo $row['score1'];?> <br>
-                      Shot 5: <?php echo $row['score1'];?> <br>
+                      <h3> Round: x </h3><br>
+                      <h4>Shot 1: <?php echo $row['score1'];?> </h4>
+                      <h4>Shot 2: <?php echo $row['score1'];?>  </h4>
+                      <h4>Shot 3: <?php echo $row['score1'];?>  </h4>
+                      <h4>Shot 4: <?php echo $row['score1'];?>  </h4>
+                      <h4>Shot 5: <?php echo $row['score1'];?>  </h4></br>
+                      
+                      <button class="btn btn-lg btn-danger btn-block" name="del-score" type="submit">Delete round</button></br>
                     </li>
                    </ul>
                    
