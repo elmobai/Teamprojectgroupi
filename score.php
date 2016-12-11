@@ -22,20 +22,18 @@ if(isset($_SESSION['user'])=="")
 
          <section class="login-register">
           <!-- <h1>Graph</h1></br> -->
-          <ul>
+          <ul class="list-group">
              <h1>Statistics Overview</h1></br>
              <p>Your results are listed below</p></br></br>
              
-             <p>Games I've Played: 10</br></br>
-             
-             <p>My Average Score: 9</p>
-             <p>My Overall Score: 190</br></br>
-             
-             <p>My best score: 1</p>
-             <p>My worst score: 10</br></br>
-             
-             <p>My most recent game: 01/12/2016</p>
-             <p>My most recent score: 10</p>
+             <h4><li class="list-group-item">Games I've Played: 10</li></h4>
+             <h4><li class="list-group-item">Average score: 9</li></h4>
+             <h4><li class="list-group-item">Overall score: 190</li></h4>
+             <h4><li class="list-group-item">Best game: 60</li></h4>
+             <h4><li class="list-group-item">Worst game: 10</li></h4>
+             <h4><li class="list-group-item">Most recent game: 01/12/2016</li></h4>
+             <h4><li class="list-group-item">Most recent score: 10</li></h4>
+ 
            </ul>  
         </section>
       </diiv>
@@ -83,17 +81,22 @@ if(isset($_SESSION['user'])=="")
       <section class="login-register">
       <h1>Filter Scores</h1></br>
        <p>You can sort your scores below</p></br></br>
+        
+       
+           
         <?php
          $dbhost = 'localhost:3036';
-           $dbuser = 'elmobai';
-           $dbpass = '';
+         $dbuser = 'elmobai';
+         $dbpass = '';
          $conn = mysql_connect($dbhost, $dbuser, $dbpass);
            
            if(! $conn ) {
               die('Could not connect: ' . mysql_error());
            }
            
-           $sql = 'SELECT id,score1,score2,score3,score4,score5 FROM scores';
+           $sql = "SELECT id,score1,score2,score3,score4,score5 FROM scores WHERE user = '$user'";
+           
+
            mysql_select_db('c9');
            $retval = mysql_query( $sql, $conn );
            
@@ -101,13 +104,21 @@ if(isset($_SESSION['user'])=="")
               die('Could not get data: ' . mysql_error());
            }
            while($row = mysql_fetch_assoc($retval)) {
-              echo "Score1 :{$row['score1']}  <br> ".
-                 "score2 : {$row['score2']} <br> ".
-                 "score3 : {$row['score3']} <br> ".
-                 "score4 : {$row['score4']} <br> ".
-                 "score5 : {$row['score5']} <br> ".
-                 "--------------------------------<br>";
+              echo 
+                 "
+                   <ul class='list-group'>
+                    <li class='list-group-item'>
+                      <h4> Round: x </h4><br>
+                      Shot 1: {$row['score1']} <br>
+                      Shot 2: {$row['score2']} <br>
+                      Shot 3: {$row['score3']} <br>
+                      Shot 4: {$row['score4']} <br>
+                      Shot 5: {$row['score5']} <br>
+                    </li>
+                   </ul>
+                 ";
            }?>  
+           
       </section>
     </div>
     
