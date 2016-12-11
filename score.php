@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 <?php include_once 'scoring.php';?>
 <?php include_once 'classes/dbconnect.php';?>
+<?php include_once 'api/DbBookings.php';?>
 
 <?php 
 if(isset($_SESSION['user'])=="")
@@ -82,9 +83,34 @@ if(isset($_SESSION['user'])=="")
       <h1>Filter Scores</h1></br>
        <p>You can sort your scores below</p></br></br>
         
-       
-           
-        <?php
+       <?php
+                  $user_id = $_SESSION['user'];
+                  $sql = "SELECT * from scores WHERE user = '$user_id'";
+                  $query = mysql_query($sql) or die(mysql_error());
+              ?>
+        
+              <?php 
+              $res = json_decode($result, true);
+              //foreach($res as $item); //foreach element in $arr
+              while ($row = mysql_fetch_array($query)) {?>
+              
+               
+                   <ul class='list-group'>
+                    <li class='list-group-item'>
+                      <h4> Round: x </h4><br>
+                      Shot 1: <?php echo $row['score1'];?> <br>
+                      Shot 2: <?php echo $row['score1'];?> <br>
+                      Shot 3: <?php echo $row['score1'];?> <br>
+                      Shot 4: <?php echo $row['score1'];?> <br>
+                      Shot 5: <?php echo $row['score1'];?> <br>
+                    </li>
+                   </ul>
+                   
+             
+          <?php } ?>
+          
+          
+        <!--
          $dbhost = 'localhost:3036';
          $dbuser = 'elmobai';
          $dbpass = '';
@@ -94,7 +120,7 @@ if(isset($_SESSION['user'])=="")
               die('Could not connect: ' . mysql_error());
            }
            
-           $sql = "SELECT id,score1,score2,score3,score4,score5 FROM scores WHERE user = '$user'";
+           $sql = 'SELECT id,score1,score2,score3,score4,score5 FROM scores WHERE user = '$user'';
            
 
            mysql_select_db('c9');
@@ -118,7 +144,7 @@ if(isset($_SESSION['user'])=="")
                    </ul>
                  ";
            }?>  
-           
+           -->
       </section>
     </div>
     

@@ -31,8 +31,7 @@ if(isset($_POST['btn-score']))
   $score4 = mysqli_real_escape_string($db, $_POST['score4']);
   $score5 = mysqli_real_escape_string($db, $_POST['score5']);
   $user = mysqli_real_escape_string($db, $_SESSION['user']);
-  $sql = "INSERT INTO scores(score1 ,score2, score3, score4, score5, user) VALUES('".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')";
-  $result = $db->query($sql);
+ 
   
   if(mysql_query("INSERT INTO scores(score1,score2,score3,score4,score5, user) VALUES('".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')"))
   {
