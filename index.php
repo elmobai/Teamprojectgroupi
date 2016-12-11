@@ -59,18 +59,21 @@
         <section class="login-register">
             
             <p>Click one of the links below to redirect to club directories</p></br>
-            <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">• Leinster Clubs</a>
+            <div class="list-group">
+                
+                <a href= "http://archery.ie/clubs/?province=leinster" class="list-group-item">Leinster Clubs</a>
+                
+                </br>
+                <a href= "http://archery.ie/clubs/?province=connacht" class="list-group-item">Connacht Clubs</a>
+                
+                </br>
+                <a href= "http://archery.ie/clubs/?province=munster" class="list-group-item">Munster Clubs</a>
+                
+                </br>
+                <a href= "http://archery.ie/clubs/?province=ulster" class="list-group-item">Ulster Clubs</a>
+                
+            </div>
             
-            </br></br>
-            <a class ="Connacht Clubs" href= "http://archery.ie/clubs/?province=connacht">• Connacht Clubs</a>
-            
-            </br></br>
-            <a class ="Munster clubs" href= "http://archery.ie/clubs/?province=munster">• Munster Clubs</a>
-            
-            </br></br>
-            <a class ="Ulster clubs" href= "http://archery.ie/clubs/?province=ulster">• Ulster Clubs</a>
-            
-            </br>
         </section>
     </div>
     

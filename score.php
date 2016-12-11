@@ -21,20 +21,22 @@ if(isset($_SESSION['user'])=="")
     <div id="graph" class="col-sm-4">
 
          <section class="login-register">
-         <!-- <h1>Graph</h1></br> -->
-            <h1>Statistics Overview</h1></br>
-            <p>Your results are listed below</p></br></br>
-            
-            <p>Games I've Played: 10</br></br>
-            
-            <p>My Average Score: 9</p>
-            <p>My Overall Score: 190</br></br>
-            
-            <p>My best score: 1</p>
-            <p>My worst score: 10</br></br>
-            
-            <p>My most recent game: 01/12/2016</p>
-            <p>My most recent score: 10</p>
+          <!-- <h1>Graph</h1></br> -->
+          <ul>
+             <h1>Statistics Overview</h1></br>
+             <p>Your results are listed below</p></br></br>
+             
+             <p>Games I've Played: 10</br></br>
+             
+             <p>My Average Score: 9</p>
+             <p>My Overall Score: 190</br></br>
+             
+             <p>My best score: 1</p>
+             <p>My worst score: 10</br></br>
+             
+             <p>My most recent game: 01/12/2016</p>
+             <p>My most recent score: 10</p>
+           </ul>  
         </section>
       </diiv>
     </div>
