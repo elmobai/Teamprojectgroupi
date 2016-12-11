@@ -36,8 +36,8 @@ if(isset($_SESSION['user'])=="")
             <p>My most recent game: 01/12/2016</p>
             <p>My most recent score: 10</p>
         </section>
-    </diiv>
-  </div>
+      </diiv>
+    </div>
       
     <!-- separate divs -->
     </p>
@@ -109,47 +109,6 @@ if(isset($_SESSION['user'])=="")
       </section>
     </div>
     
-          <!-- divs are overlapping -->
-          <!--
-          <div class="row" style="height:80px">
-              <div id="target" class="col-sm-12"> 
-                   include 'index.php'; ?>
-             </div>
-          </div>
-          
-          <div class="row" style="height:80px">
-              <div id="target" class="col-sm-12"> 
-                  include 'footer.php'; ?>
-              </div>
-          </div>
-          
-        </div>
-        -->
-
-        <!--
-        <div class="container">
-           <h1>Edit Stats</h1>
-           <div id="editstats" class="row">
-           <div class="col-sm-12 dark">
-              <h3>Input Stats</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-          </div>
-        </div>
-        -->
-        
-        <!--
-        <div class="container">
-           <h1>Edit Stats</h1>
-           <div id="editstats" class="row">
-              <div class="col-sm-12 dark">
-                  <h3>Input Stats</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-            </div>
-          </div>-->
-          
     </div>
 </div>
 

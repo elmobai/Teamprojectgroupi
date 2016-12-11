@@ -20,7 +20,7 @@ if(isset($_POST['btn-signup']))
  {
   ?>
         <script>alert('Thank you, your details have been added successfully!');</script>
- echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/index.php';</script>";
+ echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/login.php';</script>";
         <?php
  }
  else

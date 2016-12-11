@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <?php include 'header.php'; ?>
-<?php include_once 'scoring.php';?>
 <?php include_once 'classes/dbconnect.php';?>
 
   <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css">
@@ -14,13 +13,15 @@
 
 <div class="container">
     <!-- index intro -->
+    <!--
     <div class="row">
         <div class="col-sm-12">
           <h1>Welcome to Archers Logbook</h1>
           <h1><small>Shoot for the stars!</small></h1>
         </div>
-  </div>
-  
+    </div>
+    -->
+    
     <!-- separate divs -->
     </p>
   
@@ -36,7 +37,7 @@
              <style>#my-map-display .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style>
              </div>
              <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=e64fa5a0-63dd-8ab9-5138-d584a3c04ba7&c=google-maps-html&u=1479207504" defer="defer" async="async"></script>
-    </div>
+        </div>
     
     <!-- separate divs -->
     </p>
@@ -45,7 +46,7 @@
     <div id="filterclub" class="col-sm-4">
       <h1>Latest News</h1><br/>
       <div>
-         <a class="twitter-timeline" data-width="310" data-height="520" href="https://twitter.com/ArcheryIreland">Tweets by ArcheryIreland</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+         <a class="twitter-timeline" data-width="310" data-height="510" href="https://twitter.com/ArcheryIreland">Tweets by ArcheryIreland</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
     
@@ -57,7 +58,7 @@
       <h1>Club Directory</h1> </br>
         <section class="login-register">
             
-            
+            <p>Click one of the links below to redirect to club directories</p></br>
             <a class ="Leinster clubs" href= "http://archery.ie/clubs/?province=leinster">• Leinster Clubs</a>
             
             </br></br>
@@ -68,6 +69,8 @@
             
             </br></br>
             <a class ="Ulster clubs" href= "http://archery.ie/clubs/?province=ulster">• Ulster Clubs</a>
+            
+            </br>
         </section>
     </div>
     
