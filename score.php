@@ -99,10 +99,10 @@ if(isset($_SESSION['user'])=="")
                     <li class='list-group-item'>
                       <h3> Round: x </h3><br>
                       <h4>Shot 1: <?php echo $row['score1'];?> </h4>
-                      <h4>Shot 2: <?php echo $row['score1'];?>  </h4>
-                      <h4>Shot 3: <?php echo $row['score1'];?>  </h4>
-                      <h4>Shot 4: <?php echo $row['score1'];?>  </h4>
-                      <h4>Shot 5: <?php echo $row['score1'];?>  </h4></br>
+                      <h4>Shot 2: <?php echo $row['score2'];?>  </h4>
+                      <h4>Shot 3: <?php echo $row['score3'];?>  </h4>
+                      <h4>Shot 4: <?php echo $row['score4'];?>  </h4>
+                      <h4>Shot 5: <?php echo $row['score5'];?>  </h4></br>
                       
                       <button class="btn btn-lg btn-danger btn-block" name="del-score" type="submit">Delete round</button></br>
                     </li>
