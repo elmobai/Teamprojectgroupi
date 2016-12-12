@@ -30,17 +30,29 @@ if(isset($_SESSION['user'])=="")
              <h4><li class="list-group-item">Games I've Played: x</li></h4>
              <h4><li class="list-group-item">Average score: 
              
-             
+             </li>
              
              <h4><li class="list-group-item">Overall score: x</li></h4>
              SELECT    score1,
-          score2,
-          score3,
-          score4,
-          score5,
+                       score2,
+                       score3,
+                       score4,
+                       score5,
+                      (score1 + score2 +  score3 + score4 + score5 )   as ‘AVERAGE’
+                      FROM scores
+
              <h4><li class="list-group-item">Best game: x</li></h4>
+             SELECT MAX( AVERAGE ) 
+             FROM scores
+                       
+             
              <h4><li class="list-group-item">Worst game: x</li></h4>
+             SELECT MIN( AVERAGE ) 
+             FROM scores
+
+                       
              <h4><li class="list-group-item">Most recent game: date</li></h4>
+             
              <h4><li class="list-group-item">Most recent score: date</li></h4>
  
            </ul>  
@@ -61,24 +73,24 @@ if(isset($_SESSION['user'])=="")
           <h1>Add Scores</h1></br>
           <p>Please enter your score below</p></br></br>
           
-          <input type="text" class="required mdl-textfield__input form-control" name="round" required="" placeholder="Enter round number" autofocus=""/></p>
+          <input type="number" class="required mdl-textfield__input form-control" name="round" required="" min="1" placeholder="Enter round number" autofocus=""/></p>
           
           <!-- <label for="Score 1">Score 1:</label><br/> -->
-          <input type="text" class="required mdl-textfield__input form-control" name="score1" required="" placeholder="Enter shot 1 (1-10)"/></p>
+          <input type="number" class="required mdl-textfield__input form-control" name="score1" required="" min="0" max="10" placeholder="Enter shot 1 (1-10)"/></p>
               
            <!-- <label for="Score 2">Score 2:</label> -->
-           <input type="text" class="required mdl-textfield__input form-control" name="score2"  required="" placeholder="Enter shot 2 (1-10)"/></p>
+           <input type="number" class="required mdl-textfield__input form-control" name="score2"  required="" min="0" max="10" placeholder="Enter shot 2 (1-10)"/></p>
     
            <!-- <label for="score 3">Score 3:</label> -->
-           <input type="text" class="required mdl-textfield__input form-control" name="score3" required="" placeholder="Enter shot 3 (1-10)"/></p>
+           <input type="number" class="required mdl-textfield__input form-control" name="score3" required=""  min="0" max="10" placeholder="Enter shot 3 (1-10)"/></p>
     
             <!-- <label for="score 4">Score 4:</label><br/> -->
-            <input type="text" class="required mdl-textfield__input form-control" name="score4" required="" placeholder="Enter shot 4 (1-10)"/></p>
+            <input type="number" class="required mdl-textfield__input form-control" name="score4" required=""  min="0" max="10" placeholder="Enter shot 4 (1-10)"/></p>
             
            <!-- <label for="score 5">Score 5:</label> -->
-           <input type="text" class="required mdl-textfield__input form-control" name="score5" required="" placeholder="Enter shot 5 (1-10)"/></br></br>
+           <input type="number" class="required mdl-textfield__input form-control" name="score5" required=""  min="0" max="10" placeholder="Enter shot 5 (1-10)"/></br></br>
            
-           <button class="btn btn-lg btn-warning btn-block" name="btn-score" type="submit">Add scores</button></br>
+           <button class="btn btn-lg btn-warning btn-block" name="btn-add-score" type="submit">Add scores</button></br>
         
         </form>
      </section>
@@ -107,57 +119,21 @@ if(isset($_SESSION['user'])=="")
                
                    <ul class='list-group'>
                     <li class='list-group-item'>
-                      <h3> Round: x </h3><br>
-                      <h3>Shot: <?php echo $row['round'];?> </h3>
+                     
+                      <h3>Shot: <?php echo $row['round'];?> </h3></br>
                       <h4>Shot 1: <?php echo $row['score1'];?> </h4>
                       <h4>Shot 2: <?php echo $row['score2'];?>  </h4>
                       <h4>Shot 3: <?php echo $row['score3'];?>  </h4>
                       <h4>Shot 4: <?php echo $row['score4'];?>  </h4>
                       <h4>Shot 5: <?php echo $row['score5'];?>  </h4></br>
                       
-                      <button class="btn btn-lg btn-danger btn-block" name="del-score" type="submit">Delete round</button></br>
+                      <button class="btn btn-lg btn-danger btn-block" name="btn-del-score" type="submit">Delete round</button></br>
                     </li>
                    </ul>
                    
              
           <?php } ?>
-          
-          
-        <!--
-         $dbhost = 'localhost:3036';
-         $dbuser = 'elmobai';
-         $dbpass = '';
-         $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-           
-           if(! $conn ) {
-              die('Could not connect: ' . mysql_error());
-           }
-           
-           $sql = 'SELECT id,score1,score2,score3,score4,score5 FROM scores WHERE user = '$user'';
-           
-
-           mysql_select_db('c9');
-           $retval = mysql_query( $sql, $conn );
-           
-           if(! $retval ) {
-              die('Could not get data: ' . mysql_error());
-           }
-           while($row = mysql_fetch_assoc($retval)) {
-              echo 
-                 "
-                   <ul class='list-group'>
-                    <li class='list-group-item'>
-                      <h4> Round: x </h4><br>
-                      Shot 1: {$row['score1']} <br>
-                      Shot 2: {$row['score2']} <br>
-                      Shot 3: {$row['score3']} <br>
-                      Shot 4: {$row['score4']} <br>
-                      Shot 5: {$row['score5']} <br>
-                    </li>
-                   </ul>
-                 ";
-           }?>  
-           -->
+       
       </section>
     </div>
     

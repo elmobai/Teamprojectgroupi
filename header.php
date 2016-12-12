@@ -31,7 +31,7 @@ session_start();
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   
   <!--favicon-->
-  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/header/logo3.png" type="image/png" sizes="16x16 32x32">
+  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/logo4.png" type="image/png" sizes="16x16 32x32">
   
   <!--Page Title-->  
   <title>Archer's Logbook</title>
