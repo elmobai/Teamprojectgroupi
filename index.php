@@ -36,7 +36,7 @@
                  </iframe></div><a class="google-maps-html" rel="nofollow" href="http://www.interserver-coupons.com" id="auth-maps-data">http://www.interserver-coupons.com</a>
              <style>#my-map-display .text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style>
              </div>
-             <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=e64fa5a0-63dd-8ab9-5138-d584a3c04ba7&c=google-maps-html&u=1479207504" defer="defer" async="async"></script>
+             <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=Archery%20Club&key=AIzaSyBNOZe1LJ9NOWySr2cnCSQYBH0rvbNdVQo" allowfullscreen></iframe>
         </div>
     
     <!-- separate divs -->

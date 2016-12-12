@@ -28,8 +28,16 @@ if(isset($_SESSION['user'])=="")
              <p>Your results are listed below</p></br></br>
              
              <h4><li class="list-group-item">Games I've Played: x</li></h4>
-             <h4><li class="list-group-item">Average score: x</li></h4>
+             <h4><li class="list-group-item">Average score: 
+             
+             
+             
              <h4><li class="list-group-item">Overall score: x</li></h4>
+             SELECT    score1,
+          score2,
+          score3,
+          score4,
+          score5,
              <h4><li class="list-group-item">Best game: x</li></h4>
              <h4><li class="list-group-item">Worst game: x</li></h4>
              <h4><li class="list-group-item">Most recent game: date</li></h4>
@@ -53,8 +61,10 @@ if(isset($_SESSION['user'])=="")
           <h1>Add Scores</h1></br>
           <p>Please enter your score below</p></br></br>
           
+          <input type="text" class="required mdl-textfield__input form-control" name="round" required="" placeholder="Enter round number" autofocus=""/></p>
+          
           <!-- <label for="Score 1">Score 1:</label><br/> -->
-          <input type="text" class="required mdl-textfield__input form-control" name="score1" required="" placeholder="Enter shot 1 (1-10)" autofocus=""/></p>
+          <input type="text" class="required mdl-textfield__input form-control" name="score1" required="" placeholder="Enter shot 1 (1-10)"/></p>
               
            <!-- <label for="Score 2">Score 2:</label> -->
            <input type="text" class="required mdl-textfield__input form-control" name="score2"  required="" placeholder="Enter shot 2 (1-10)"/></p>
@@ -68,7 +78,7 @@ if(isset($_SESSION['user'])=="")
            <!-- <label for="score 5">Score 5:</label> -->
            <input type="text" class="required mdl-textfield__input form-control" name="score5" required="" placeholder="Enter shot 5 (1-10)"/></br></br>
            
-            <button class="btn btn-lg btn-warning btn-block" name="btn-score" type="submit">Add scores</button></br>
+           <button class="btn btn-lg btn-warning btn-block" name="btn-score" type="submit">Add scores</button></br>
         
         </form>
      </section>
@@ -98,6 +108,7 @@ if(isset($_SESSION['user'])=="")
                    <ul class='list-group'>
                     <li class='list-group-item'>
                       <h3> Round: x </h3><br>
+                      <h3>Shot: <?php echo $row['round'];?> </h3>
                       <h4>Shot 1: <?php echo $row['score1'];?> </h4>
                       <h4>Shot 2: <?php echo $row['score2'];?>  </h4>
                       <h4>Shot 3: <?php echo $row['score3'];?>  </h4>

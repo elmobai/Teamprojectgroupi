@@ -25,6 +25,7 @@ if(isset($_SESSION['user'])=="")
 if(isset($_POST['btn-score']))
 {
   $db = Connect();
+  $round = mysqli_real_escape_string($db, $_POST['round']);
   $score1 = mysqli_real_escape_string($db, $_POST['score1']);
   $score2 = mysqli_real_escape_string($db, $_POST['score2']);
   $score3 = mysqli_real_escape_string($db, $_POST['score3']);
@@ -33,7 +34,7 @@ if(isset($_POST['btn-score']))
   $user = mysqli_real_escape_string($db, $_SESSION['user']);
  
   
-  if(mysql_query("INSERT INTO scores(score1,score2,score3,score4,score5, user) VALUES('".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')"))
+  if(mysql_query("INSERT INTO scores(round, score1,score2,score3,score4,score5, user) VALUES('".$round."','".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')"))
   {
   ?>
      <script>alert('Thank you, Your scores have been added successfully!');</script>
