@@ -12,6 +12,7 @@ function Connect(){
     
 ?>
 
+<!--if total[0] < total[2]{ save total1 tot=total1 }else {save total0 tot=total0 if(tot < total2....}-->
 <!-- add scores -->
 
 <?php
@@ -33,57 +34,26 @@ if(isset($_POST['btn-add-score']))
   $score3 = mysqli_real_escape_string($db, $_POST['score3']);
   $score4 = mysqli_real_escape_string($db, $_POST['score4']);
   $score5 = mysqli_real_escape_string($db, $_POST['score5']);
+  $total = mysqli_real_escape_string($db, ($_POST['score3']) + ($_POST['score2']) + ($_POST['score1']) + ($_POST['score4']) + ($_POST['score5']));
   $user = mysqli_real_escape_string($db, $_SESSION['user']);
  
-  
-  if(mysql_query("INSERT INTO scores(round, score1,score2,score3,score4,score5, user) VALUES('".$round."','".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')"))
-  {
-  ?>
-     <script>alert('Thank you, Your scores have been added successfully!');</script>
-     echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/score.php';</script>";
-  <?php
- }
+  // ad col for totalS
+      if(mysql_query("INSERT INTO scores(round, score1,score2,score3,score4,score5, user) VALUES('".$round."','".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')"))
+      {
+     
+         echo '<script>alert("Thank you, Your scores have been added successfully!");</script>';
+         echo '<script>window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";</script>';
+      
+      }
  
- else
- {
-  ?>
-    <script>alert('Sorry, there was an error adding your scores. Please try again.');</script>
-    echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/score.php';</script>";
- <?php
- }
+     else
+     {
+      
+        echo '<script>alert("Sorry, there was an error adding your scores. Please try again.");</script>';
+        echo '<script>window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";</script>';
+     
+     }
 
 }
 ?>
 
-<!-- delete scores -->
-<?php
-if(isset($_POST['btn-del-score']))
-{
-  $db = Connect();
-  $round = mysqli_real_escape_string($db, $_POST['round']);
-  $score1 = mysqli_real_escape_string($db, $_POST['score1']);
-  $score2 = mysqli_real_escape_string($db, $_POST['score2']);
-  $score3 = mysqli_real_escape_string($db, $_POST['score3']);
-  $score4 = mysqli_real_escape_string($db, $_POST['score4']);
-  $score5 = mysqli_real_escape_string($db, $_POST['score5']);
-  $user = mysqli_real_escape_string($db, $_SESSION['user']);
- 
-  
-  if(mysql_query("INSERT INTO scores(round, score1,score2,score3,score4,score5, user) VALUES('".$round."','".$score1."','".$score2."','".$score3."','".$score4."','".$score5."','".$user."')"))
-  {
-  ?>
-     <script>alert('Thank you, Your round has been deleted successfully!');</script>
-     echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/score.php';</script>";
-  <?php
- }
- 
- else
- {
-  ?>
-    <script>alert('Sorry, there was an error deleting your round. Please try again.');</script>
-    echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/score.php';</script>";
- <?php
- }
-
-}
-?>

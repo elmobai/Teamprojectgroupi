@@ -3,6 +3,9 @@
 <?php
 include_once 'classes/dbconnect.php';
 session_start(); 
+ 
+include_once 'api/Config.php';
+include_once 'scoring.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +34,7 @@ session_start();
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   
   <!--favicon-->
-  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/logo4.png" type="image/png" sizes="16x16 32x32">
+  <link rel="icon" href="https://teamprojectgroupi-elmobai.c9users.io/images/logo.png" type="image/png" sizes="16x16 32x32">
   
   <!--Page Title-->  
   <title>Archer's Logbook</title>
@@ -88,9 +91,23 @@ session_start();
           <?php 
           if(isset($_SESSION['user'])!=""){ 
             ?>
-            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/score.php"><button class="btn btn-warning" name="btn-login"><?php echo $_SESSION['user']; ?>'s Profile</font></strong></button></a> </li>
+            <li><a href="https://teamprojectgroupi-elmobai.c9users.io/score.php"><button class="btn btn-warning" name="btn-login">
+              <?php if(isset($_SESSION['user'])=="")
+                	{
+                	 echo "<script>alert('You must log in first to continue!');</script>";
+                	 echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/login.php';</script>";
+                	}
+                	$db2 = Connect();
+                	$user = $_SESSION['user'];
+                	$sql44 = "SELECT firstname FROM registered WHERE email = '".$user."' ";
+                 if ($result23 = $db2->query($sql44)){
+                    if($row3 = $result23->fetch_assoc()){
+                        $firstname2 = $row3['firstname']; //fetch ("$row ")
+                    	echo $firstname2;
+                    }
+                ?>'s Profile</font></strong></button></a> </li>
              <li><a href="https://teamprojectgroupi-elmobai.c9users.io/logout.php"><button class="btn btn-danger" name="btn-login">Log Out</button></a></li>
-          <?php } ?>
+          <?php }} ?>
           
         </ul>
       </div>
