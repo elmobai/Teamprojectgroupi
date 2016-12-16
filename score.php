@@ -70,23 +70,44 @@ if(isset($_SESSION['user'])=="")
             </li></h4>
               
              <!--average score--> 
-             <h4><li class="list-group-item">Average score: <?php echo $row['avg'];?> points</li></h4>
-                 <?php if($row = mysql_fetch_array("avg")){?>
+             <h4><li class="list-group-item">Average Score: 0
+                 
+                 <!--?php if(isset($_SESSION['user'])=="")
+                	{
+                	 echo "<script>alert('You must log in first to continue!');</script>";
+                	 echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/login.php';</script>";
+                	}
+                	$db3 = Connect();
+                	$user = $_SESSION['user'];
+                	$sql = "SELECT avg FROM scores WHERE user = '".$user."' ";
+                    if($resultA = $db3->query($sql)){
+                        $avg = $resultA->num_rows;  //fetch ("$row ")
+                    	echo $avg;
+                    }
+                ?-->
+            </li></h4>
+             
+             <h4><li class="list-group-item">Average score: 0</li></h4>
+                 <?php echo $row['avg'];?>
                  
                  <!-- <!-?php if($row = mysql_fetch_array("SELECT AVERAGE FROM scores WHERE user = '".$user."'")){?>-->
                  
              <!--best game-->
-             <h4><li class="list-group-item">Best game: 50 points</li></h4>
+             <h4><li class="list-group-item">Best game: 0</li></h4>
               
              <!--worst game--> 
-             <h4><li class="list-group-item">Worst game: 5 points </li></h4>
+             <h4><li class="list-group-item">Worst game: 0</li></h4>
               
              <!--most recent game-->       
-             <h4><li class="list-group-item">Most recent game: 13/12/2016</li></h4>
-                 <?php }?><!-- TIMESTAMP WITH ADD DATETIME ECHO DATE TIME HERE (DATE_SUB)-->
-                 <?php if($row = mysql_fetch_array("")){?>
+             <h4><li class="list-group-item">Most recent game: 0</li></h4>
+                <!-- TIMESTAMP WITH ADD DATETIME ECHO DATE TIME HERE (DATE_SUB)-->
+                <?php $result = mysql_query('SELECT date FROM scores');
+                        $row_first = mysql_fetch_array($result);
+                        mysql_data_seek($result , (mysql_num_rows($result)-1));
+                        $row_last =  mysql_fetch_array($result);?>
+                
               
-             <?php }?>
+             
              
            </ul>  
         </section>
@@ -110,8 +131,8 @@ if(isset($_SESSION['user'])=="")
           <input type="number" class="required mdl-textfield__input form-control" name="score2"  required="" min="0" max="10" placeholder="Enter shot 2 (1-10)"/></p>
           <input type="number" class="required mdl-textfield__input form-control" name="score3" required=""  min="0" max="10" placeholder="Enter shot 3 (1-10)"/></p>
           <input type="number" class="required mdl-textfield__input form-control" name="score4" required=""  min="0" max="10" placeholder="Enter shot 4 (1-10)"/></p>
-          <input type="number" class="required mdl-textfield__input form-control" name="score5" required=""  min="0" max="10" placeholder="Enter shot 5 (1-10)"/></br></br>
-          <input type = "date" class="data-sort-initial" name="date" placeholder="date"/></br></br>
+          <input type="number" class="required mdl-textfield__input form-control" name="score5" required=""  min="0" max="10" placeholder="Enter shot 5 (1-10)"/></p>
+          <input type = "date" class="data-sort-initial required mdl-textfield__input form-control" name="date" placeholder="date"/></br></br>
           <button class="btn btn-lg btn-warning btn-block" name="btn-add-score" type="submit">Add scores</button></br>
         
         </form>
@@ -132,7 +153,7 @@ if(isset($_SESSION['user'])=="")
               $sql = "SELECT * from scores WHERE user = '$user_id' ORDER BY round";
               $queryAdd = mysql_query($sql) or die(mysql_error());
          
-              $res = json_decode($result, true);
+              //$res = json_decode($result, true);
               //foreach($res as $item); //foreach element in $arr
               while ($row = mysql_fetch_array($queryAdd)) {?>
           
@@ -147,33 +168,14 @@ if(isset($_SESSION['user'])=="")
                   <h4>Shot 4: <?php echo $row['score4'];?>  </h4>
                   <h4>Shot 5: <?php echo $row['score5'];?>  </h4></br>
               <!--<h4>Total: <?php echo  ($row['score1']) + ($row['score2']) + ($row['score3']) + ($row['score4']) + ($row['score5']);?> </h4>-->
-                  <h4>Date: <?php echo $row['date'];?>  </h4>
+                  <h4>Total: <?php echo $row['total'];?>  </h4>
                   <h4>Average: <?php echo $row['avg'];?>  </h4>
-                  <h4>Total: <?php echo $row['total'];?>  </h4></br>
+                  <h4>Date: <?php echo $row['date'];?>  </h4>
+                  </br>
                   
-                  <!-- delete scores/delete button -->
-                  <?php
-                      mysql_connect("localhost", "elmobai", "") 
-                      or die("Connection Failed"); 
-                      mysql_select_db("c9")
-                      or die("Connection Failed"); 
-                      
-                      $id = $_POST['id']; 
-                      $query = "DELETE from scores WHERE id = '".$id."' "; 
-                      if(mysql_query($query)){ 
-                        //pop up for suc
-                        //on ok refresh (google it nig)
-                        echo '<script>alert("Your scores have been added successfully!");
-                        echo window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";</script>';
-                      } else{
-                        //pop for failed goes here
-                        echo '<script>alert("Your scores have been added successfully!");
-                        echo window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";</script>';
-                      } 
-                
-                    ?>
+                  
                     
-                <form method="post">
+                <form action="delete.php" method="post">
                   <input style="display:none;" name="id" type="number" min="1" placeholder="" value="<?php echo $row['id'];?>" required=""></p>
                   <input name="delete" class="btn btn-lg btn-danger btn-block" type="submit" id="btn-del-score" value="Delete">
                 </form>

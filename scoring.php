@@ -37,11 +37,12 @@ if(isset($_POST['btn-add-score']))
   $score3 = mysqli_real_escape_string($db, $_POST['score3']);
   $score4 = mysqli_real_escape_string($db, $_POST['score4']);
   $score5 = mysqli_real_escape_string($db, $_POST['score5']);
+  $date = mysqli_real_escape_string($db, $_POST['date']);
   $total = mysqli_real_escape_string($db, ($_POST['score1']) + ($_POST['score2']) + ($_POST['score3']) + ($_POST['score4']) + ($_POST['score5']));
   $avg = mysqli_real_escape_string($db, ( (($_POST['score1']) + ($_POST['score2']) + ($_POST['score3']) + ($_POST['score4']) + ($_POST['score5'])) /5 ) );
   //$date = mysqli_real_escape_string($db, $_POST['date(yyyy/MM/dd)']);
   //look at dragon for printing out date format
-  $date = date('d-m-Y', strtotime($dates)); //date format
+ 
 
   $user = mysqli_real_escape_string($db, $_SESSION['user']);
  
