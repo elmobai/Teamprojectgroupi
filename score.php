@@ -68,41 +68,18 @@ if(isset($_SESSION['user'])=="")
                     }
                 ?>
             </li></h4>
-                
-                
-             <!-- <?php if($row = mysql_fetch_array("SELECT AVERAGE FROM scores WHERE user = '".$user."'")){?>-->
               
              <!--average score--> 
-             <h4><li class="list-group-item">Average score: <?php echo $row['AVERAGE'];?> points</li></h4>
-             
-                 <!--
-                 SELECT    score1,
-                           score2,
-                           score3,
-                           score4,
-                           score5,
-                          (score1 + score2 +  score3 + score4 + score5 )   as ‘AVERAGE’
-                          FROM scores
-                -->
-                 <?php }?>
-                 <?php if($row = mysql_fetch_array("")){?>
-             
+             <h4><li class="list-group-item">Average score: <?php echo $row['avg'];?> points</li></h4>
+                 <?php if($row = mysql_fetch_array("avg")){?>
+                 
+                 <!-- <!-?php if($row = mysql_fetch_array("SELECT AVERAGE FROM scores WHERE user = '".$user."'")){?>-->
+                 
              <!--best game-->
              <h4><li class="list-group-item">Best game: 50 points</li></h4>
-                 <!--SELECT MAX( AVERAGE ) 
-                 FROM scores
-                           -->
-                  <?php }?>
-                  <?php if($row = mysql_fetch_array("")){?>
               
              <!--worst game--> 
-             <h4><li class="list-group-item">Worst game: 5 point </li></h4>
-                 <!--
-                 SELECT MIN( AVERAGE ) 
-                 FROM scores
-                    -->
-                <?php }?>    
-                <?php if($row = mysql_fetch_array("")){?>
+             <h4><li class="list-group-item">Worst game: 5 points </li></h4>
               
              <!--most recent game-->       
              <h4><li class="list-group-item">Most recent game: 13/12/2016</li></h4>
@@ -134,6 +111,7 @@ if(isset($_SESSION['user'])=="")
           <input type="number" class="required mdl-textfield__input form-control" name="score3" required=""  min="0" max="10" placeholder="Enter shot 3 (1-10)"/></p>
           <input type="number" class="required mdl-textfield__input form-control" name="score4" required=""  min="0" max="10" placeholder="Enter shot 4 (1-10)"/></p>
           <input type="number" class="required mdl-textfield__input form-control" name="score5" required=""  min="0" max="10" placeholder="Enter shot 5 (1-10)"/></br></br>
+          <input type = "date" class="data-sort-initial" name="date" placeholder="date"/></br></br>
           <button class="btn btn-lg btn-warning btn-block" name="btn-add-score" type="submit">Add scores</button></br>
         
         </form>
@@ -151,7 +129,7 @@ if(isset($_SESSION['user'])=="")
         
        <?php
               $user_id = $_SESSION['user'];
-              $sql = "SELECT * from scores WHERE user = '$user_id'";
+              $sql = "SELECT * from scores WHERE user = '$user_id' ORDER BY round";
               $queryAdd = mysql_query($sql) or die(mysql_error());
          
               $res = json_decode($result, true);
@@ -162,18 +140,18 @@ if(isset($_SESSION['user'])=="")
                 <li class='list-group-item'>
                         
                   <!--<p name="id">id: <?php echo $row['id'];?> </p></br>-->
-                  <h3>Round: <?php echo $row['round'];?> </h3></br>
+                  <h3>Round <?php echo $row['round'];?> </h3></br>
                   <h4>Shot 1: <?php echo $row['score1'];?> </h4>
                   <h4>Shot 2: <?php echo $row['score2'];?>  </h4>
                   <h4>Shot 3: <?php echo $row['score3'];?>  </h4>
                   <h4>Shot 4: <?php echo $row['score4'];?>  </h4>
-                  <h4>Shot 5: <?php echo $row['score5'];?>  </h4>
-                  <span><h4>Total: <?php echo  ($row['score3']) + ($row['score2']) + ($row['score1']) + ($row['score4']) + ($row['score5']);?> </h4></span></br>
+                  <h4>Shot 5: <?php echo $row['score5'];?>  </h4></br>
+              <!--<h4>Total: <?php echo  ($row['score1']) + ($row['score2']) + ($row['score3']) + ($row['score4']) + ($row['score5']);?> </h4>-->
+                  <h4>Date: <?php echo $row['date'];?>  </h4>
+                  <h4>Average: <?php echo $row['avg'];?>  </h4>
+                  <h4>Total: <?php echo $row['total'];?>  </h4></br>
                   
-                  <!--
-                     add button to here
-                  -->
-                  <!-- delete scores -->
+                  <!-- delete scores/delete button -->
                   <?php
                       mysql_connect("localhost", "elmobai", "") 
                       or die("Connection Failed"); 
@@ -185,15 +163,19 @@ if(isset($_SESSION['user'])=="")
                       if(mysql_query($query)){ 
                         //pop up for suc
                         //on ok refresh (google it nig)
+                        echo '<script>alert("Your scores have been added successfully!");
+                        echo window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";</script>';
                       } else{
                         //pop for failed goes here
+                        echo '<script>alert("Your scores have been added successfully!");
+                        echo window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";</script>';
                       } 
                 
                     ?>
                     
                 <form method="post">
                   <input style="display:none;" name="id" type="number" min="1" placeholder="" value="<?php echo $row['id'];?>" required=""></p>
-                  <input name="delete" class="btn btn-lg btn-danger btn-block" type="submit" id="btn-del-score" value="Delete id">
+                  <input name="delete" class="btn btn-lg btn-danger btn-block" type="submit" id="btn-del-score" value="Delete">
                 </form>
                  
                   </br>
