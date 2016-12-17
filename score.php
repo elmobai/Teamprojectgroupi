@@ -57,7 +57,7 @@ if(isset($_SESSION['user'])=="")
             </li></h4>
               
              <!--average score--> 
-             <h4><li class="list-group-item">Average Score: 0
+             <h4><li class="list-group-item">Average Score: 5
                  
                  <!--?php if(isset($_SESSION['user'])=="")
                 	{
@@ -80,13 +80,13 @@ if(isset($_SESSION['user'])=="")
                  <!-- <!-?php if($row = mysql_fetch_array("SELECT AVERAGE FROM scores WHERE user = '".$user."'")){?>-->
                  
              <!--best game-->
-             <h4><li class="list-group-item">Best game: 0</li></h4>
+             <h4><li class="list-group-item">Best game: 25</li></h4>
               
              <!--worst game--> 
              <h4><li class="list-group-item">Worst game: 0</li></h4>
               
              <!--most recent game-->       
-             <h4><li class="list-group-item">Most recent game: 0</li></h4>
+             <h4><li class="list-group-item">Most recent game: 05/02/2016</li></h4>
                 <!-- TIMESTAMP WITH ADD DATETIME ECHO DATE TIME HERE (DATE_SUB)-->
                 <?php $result = mysql_query('SELECT date FROM scores');
                         $row_first = mysql_fetch_array($result);

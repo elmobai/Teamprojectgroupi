@@ -4,7 +4,7 @@
 include_once 'classes/dbconnect.php';
 session_start(); 
  
-include_once 'api/Config.php';
+include_once 'api/config.php';
 include_once 'scoring.php';
 ?>
 <!DOCTYPE html>
