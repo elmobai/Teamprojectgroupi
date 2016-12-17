@@ -53,20 +53,7 @@ if(isset($_SESSION['user'])=="")
              
             <!--games i've played-->
             <h4><li class="list-group-item">Games I've Played: 
-                 
-                 <?php if(isset($_SESSION['user'])=="")
-                	{
-                	 echo "<script>alert('You must log in first to continue!');</script>";
-                	 echo "<script>window.location = 'https://teamprojectgroupi-elmobai.c9users.io/login.php';</script>";
-                	}
-                	$db2 = Connect();
-                	$user = $_SESSION['user'];
-                	$sql = "SELECT id FROM scores WHERE user = '".$user."' ";
-                    if($result2 = $db2->query($sql)){
-                        $count = $result2->num_rows; //fetch ("$row ")
-                    	echo $count;
-                    }
-                ?>
+                <?php include 'classes/count.php'; ?>
             </li></h4>
               
              <!--average score--> 
@@ -160,7 +147,6 @@ if(isset($_SESSION['user'])=="")
                <ul class='list-group'>
                 <li class='list-group-item'>
                         
-                  <!--<p name="id">id: <?php echo $row['id'];?> </p></br>-->
                   <h3>Round <?php echo $row['round'];?> </h3></br>
                   <h4>Shot 1: <?php echo $row['score1'];?> </h4>
                   <h4>Shot 2: <?php echo $row['score2'];?>  </h4>
@@ -172,13 +158,11 @@ if(isset($_SESSION['user'])=="")
                   <h4>Average: <?php echo $row['avg'];?>  </h4>
                   <h4>Date: <?php echo $row['date'];?>  </h4>
                   </br>
-                  
-                  
-                    
-                <form action="delete.php" method="post">
-                  <input style="display:none;" name="id" type="number" min="1" placeholder="" value="<?php echo $row['id'];?>" required=""></p>
-                  <input name="delete" class="btn btn-lg btn-danger btn-block" type="submit" id="btn-del-score" value="Delete">
-                </form>
+ 
+                  <form action="classes/delete.php" method="post">
+                      <input style="display:none;" name="id" type="number" min="1" placeholder="" value="<?php echo $row['id'];?>" required=""></p>
+                      <input name="delete" class="btn btn-lg btn-danger btn-block" type="submit" id="btn-del-score" value="Delete">
+                  </form>
                  
                   </br>
                 </li>
