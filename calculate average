@@ -15,3 +15,73 @@
     	// Close the database connection
     	mysql_close();
     ?>
+    
+-------------------------------------------------------------------
+
+ <?php
+                      mysql_connect("localhost", "elmobai", "") 
+                      or die("Connection Failed"); 
+                      mysql_select_db("c9")
+                      or die("Connection Failed"); 
+                      
+                      $id = $_POST['id']; 
+                      $query = "DELETE from scores WHERE id = '".$id."' "; 
+                      
+                      if(mysql_query($query)){ 
+                            //pop up for success
+                            //on ok refresh (google it nig)
+                            echo'<script>if (window.confirm("Record deleted successfully. to reload the page to see the result?"))
+                            {
+                                window.location = "https://teamprojectgroupi-elmobai.c9users.io/score.php";
+                            }
+                          else{
+                        //pop for failed goes here
+                      } 
+                     </script>';
+                    }?>
+                    
+                    
+------------------------
+
+ <!--
+                 SELECT    score1,
+                           score2,
+                           score3,
+                           score4,
+                           score5,
+                          (score1 + score2 +  score3 + score4 + score5 )   as ‘AVERAGE’
+                          FROM scores
+                -->
+--------------------------
+<!--SELECT MAX( AVERAGE ) 
+                 FROM scores
+                           -->
+-----------------------------
+ <!--average score--> 
+             <h4><li class="list-group-item">Average score: <?php echo $row['avg'];?> points</li></h4>
+             
+                
+                 <?php }?>
+                 <?php if($row = mysql_fetch_array("avg")){?>
+             
+             <!--best game-->
+             <h4><li class="list-group-item">Best game: 50 points</li></h4>
+                 <!--SELECT MAX( AVERAGE ) 
+                 FROM scores
+                           -->
+                  
+              
+             <!--worst game--> 
+             <h4><li class="list-group-item">Worst game: 5 point </li></h4>
+                 <!--
+                 SELECT MIN( AVERAGE ) 
+                 FROM scores
+                    -->
+                
+              
+             <!--most recent game-->       
+             <h4><li class="list-group-item">Most recent game: 13/12/2016</li></h4>
+                 <?php }?><!-- TIMESTAMP WITH ADD DATETIME ECHO DATE TIME HERE (DATE_SUB)-->
+                 <?php if($row = mysql_fetch_array("")){?>
+              
+             <?php }?>
