@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-
 <?php include 'header.php'; ?>
 <?php include_once 'classes/dbconnect.php';?>
 
-  <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css">
-  <link rel="stylesheet" type="style/css" href="bs/css/bootstrap-theme.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/action.js"></script>
-
+<!-- separate divs -->
 <br/>
 
 <div class="container">

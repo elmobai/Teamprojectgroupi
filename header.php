@@ -17,18 +17,21 @@ include_once 'scoring.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#555">
   
-  <script src="js/action.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-  <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css">
+  <link rel="stylesheet" type="style/css" href="bs/css/bootstrap-theme.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="js/action.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
  
  <!--taken from dragon bookings--> 
-  <link type="text/css" rel="stylesheet" href="../css/footable.core.min.css" />
-  <link type="text/css" rel="stylesheet" href="../css/calendar.css" />
-  <link type="text/css" rel="stylesheet" href="../css/style.css" />
-  <link type="text/css" rel="stylesheet" href="../css/landingPage.css" />
+  <link type="text/css" rel="stylesheet" href="../css/footable.core.min.css">
+  <link type="text/css" rel="stylesheet" href="../css/calendar.css">
+  <link type="text/css" rel="stylesheet" href="../css/style.css">
+  <link type="text/css" rel="stylesheet" href="../css/landingPage.css">
   
    <!-- custom icons via FontAwesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
