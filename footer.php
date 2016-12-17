@@ -3,7 +3,7 @@
 </main>
 </div>
 <!-- footer is included at the end of the page -->
-    <link rel="stylesheet" type="text/css"  href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <footer>
         <a href="https://teamprojectgroupi-elmobai.c9users.io/index.php">

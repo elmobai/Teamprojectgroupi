@@ -1,25 +1,62 @@
+/* # = ID, . = Class*/
+
 /* Main styling */
 body { 
-	background:#f8f8f8;	
-	background-size:100% 100%;
-	color: #333333;
-	font-family: 'Open Sans', sans-serif;
-	font-weight:100;
-	font-size:1.4em;
-	line-height:1.6em;
-	padding:0 0 0;
-    overflow-x: hidden;
+	background-color: #555;
 	}
+
+.colour{
+    color: #009688;
+}
+
+/* navbar */
+/* Remove the navbar's default margin-bottom and rounded borders */
+.active {
+    background-color: #4CAF50;
+}
+    
+.container-fluid{
+  background-color: #555;
+  color: white;
+
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+	
 .hidden{
     display: none;
 }
+/* Set black background color, white text and some padding */
 footer{
+    background-color: #555;
+    color: white;
+    padding: 15px;
     width:100%;
-    color:#999;
-    background-color:#f9f9f9;
-    padding:1em;
     text-align: center;
 }
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
+
 section{
     background-color:#fff;
 }
@@ -69,39 +106,9 @@ section{
 header{
     padding-right: 200px;
 }
-/* Booking Manager Styling */
-.room {
-    position: relative;
-    right:0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-.room .photo{
-    background: url('../images/1stfloor.jpg') 100% 100% / contain no-repeat;
-    display: block;
-    width:100%;
-    height:350px;
-    margin:0;
-    padding: 0;
-    position: relative;
-    z-index: 10;
-}
-.room::before{
-    content: 'If you are seeing this, please contact an administrator, an image should have appeared';
-    margin-left: calc(100% - 149%);
-    width:100%;
-    position: absolute;
-    top: 40%;
-    z-index: 1;
-}
 
 .align-centered{
     text-align: center;
     margin: 0 auto;
 }
-table th:hover{
-    background-color: rgba(0,0,0,.1);
-    transition: all ease 1s;
-}
-/* View bookings styling */
+
