@@ -87,8 +87,8 @@ if(isset($_SESSION['user'])=="")
                 ?-->
             </li></h4>
              
-             <h4><li class="list-group-item">Average score: 0</li></h4>
-                 <?php echo $row['avg'];?>
+             <!--<h4><li class="list-group-item">Average score: 0</li></h4>-->
+             <!--?php echo $row['avg'];?>-->
                  
                  <!-- <!-?php if($row = mysql_fetch_array("SELECT AVERAGE FROM scores WHERE user = '".$user."'")){?>-->
                  
