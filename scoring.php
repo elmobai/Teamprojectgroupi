@@ -41,7 +41,7 @@ if(isset($_POST['btn-add-score']))
   $total = mysqli_real_escape_string($db, ($_POST['score1']) + ($_POST['score2']) + ($_POST['score3']) + ($_POST['score4']) + ($_POST['score5']));
   $avg = mysqli_real_escape_string($db, ( (($_POST['score1']) + ($_POST['score2']) + ($_POST['score3']) + ($_POST['score4']) + ($_POST['score5'])) /5 ) );
   //$date = mysqli_real_escape_string($db, $_POST['date(yyyy/MM/dd)']);
-  //look at dragon for printing out date format
+  //look at other project for printing out date format
  
 
   $user = mysqli_real_escape_string($db, $_SESSION['user']);

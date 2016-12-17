@@ -25,13 +25,8 @@ include_once 'scoring.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    
- 
- <!--taken from dragon bookings--> 
-  <link type="text/css" rel="stylesheet" href="../css/footable.core.min.css">
-  <link type="text/css" rel="stylesheet" href="../css/calendar.css">
   <link type="text/css" rel="stylesheet" href="../css/style.css">
-  <link type="text/css" rel="stylesheet" href="../css/landingPage.css">
-  
+
    <!-- custom icons via FontAwesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   
